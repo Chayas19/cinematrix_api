@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\CineMatrix_API.props" />
+</Project>
