@@ -1,13 +1,16 @@
-﻿using System.Security.Claims;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Claims;
 using AutoMapper;
 using CineMatrix_API.DTOs;
 using CineMatrix_API.Enums;
 using CineMatrix_API.Models;
 using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 
 namespace CineMatrix_API.Controllers
 {
@@ -22,6 +25,7 @@ namespace CineMatrix_API.Controllers
         private readonly IEmailService _emailSender;
         private readonly Passwordservice _passwordService;
         private readonly JwtService _jwtService;
+        private readonly IValidator<UsercreationDTO> _validator; 
 
         public UserAccountController(
             IMapper mapper,
@@ -30,7 +34,8 @@ namespace CineMatrix_API.Controllers
             ISMSService smsService,
             IEmailService emailSender,
             Passwordservice passwordService,
-            JwtService jwtService
+            JwtService jwtService,
+            IValidator<UsercreationDTO> validator
             )
         {
             _mapper = mapper;
@@ -40,6 +45,8 @@ namespace CineMatrix_API.Controllers
             _emailSender = emailSender;
             _passwordService = passwordService;
             _jwtService = jwtService;
+            _validator = validator; 
+            
 
         }
 
@@ -61,7 +68,8 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Password fields cannot be empty and must match.");
             }
 
-    
+
+
             var existingUser = await _context.Users
                 .FirstOrDefaultAsync(u => u.Email == userCreationDto.Email || u.PhoneNumber == userCreationDto.PhoneNumber);
             if (existingUser != null)
@@ -93,12 +101,14 @@ namespace CineMatrix_API.Controllers
                 Role = defaultRole.ToString()
             };
             await _context.UserRoles.AddAsync(userRole);
-            await _context.SaveChangesAsync();
+           // await _context.SaveChangesAsync();
 
           
             return Ok("User account is created successfully. Please verify your email " +
                 " complete registration successfully.");
         }
+        
+        
         [HttpPost("verify-email")]
 
         public async Task<IActionResult> VerifyEmail([FromBody] OTPVerificationDTO otpVerificationDto)

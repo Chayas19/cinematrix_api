@@ -1,5 +1,6 @@
 ﻿using CineMatrix_API.Models;
 using Microsoft.EntityFrameworkCore;
+using Moq;
 
 
 namespace CineMatrix_API
@@ -122,6 +123,11 @@ namespace CineMatrix_API
                 .HasKey(ur => new { ur.UserId, ur.RoleId });
 
 
+        }
+
+        public static implicit operator ApplicationDbContext(Mock<ApplicationDbContext> v)
+        {
+            throw new NotImplementedException();
         }
     }
 

@@ -17,19 +17,30 @@ namespace CineMatrix_API.Validations
 
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Password is required.")
+                 .Equal(x => x.Password).WithMessage("Passwords do not match.")
+                .Matches(@"[A-Z]").WithMessage("Password must contain at least one uppercase letter")
+                .Matches(@"[a-z]").WithMessage("Password must contain at least one lowercase letter")
+                .Matches(@"[0-9]").WithMessage("Password must contain at least one number")
+                .Matches(@"[\W_]").WithMessage("Password must contain atleast one special character ")
                 .MinimumLength(8).WithMessage("Password must be at least 8 characters long.");
+
 
             RuleFor(x => x.ConfirmPassword)
                 .NotEmpty().WithMessage("Confirm Password is required.")
                 .Equal(x => x.Password).WithMessage("Passwords do not match.");
+              
+
+
             RuleFor(x => x.PhoneNumber)
-                       .Must(BeValidPhoneNumber).WithMessage("Phone number must be exactly 10 digits.");
+                  .NotEmpty().WithMessage("Phone number is required");
+               
+
         }
 
         private bool BeValidPhoneNumber(long phoneNumber)
         {
             var phoneNumberStr = phoneNumber.ToString();
-            return phoneNumberStr.Length == 10; // Validate that it has exactly 10 digits
+            return phoneNumberStr.Length == 10;
         }
     }
 }

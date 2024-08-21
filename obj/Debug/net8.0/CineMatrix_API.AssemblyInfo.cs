@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CineMatrix_API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a0ebefcd6d017937bbc4c94902c89e4d17d0a42")]
 [assembly: System.Reflection.AssemblyProductAttribute("CineMatrix_API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CineMatrix_API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

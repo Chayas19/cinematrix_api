@@ -4,7 +4,7 @@ using CineMatrix_API.Filters;
 using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
 using CineMatrix_API.Validations;
-using FluentValidation; // Ensure you have this namespace included if User model is here
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -12,8 +12,8 @@ using Microsoft.IdentityModel.Tokens;
 var builder = WebApplication.CreateBuilder(args);
 
 
-builder.Services.AddValidatorsFromAssemblyContaining<UserCreationDTOValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<LoginDTOValidator>();
+
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>());
 
 
 
@@ -27,7 +27,7 @@ builder.Services.AddScoped<OtpService>();
 builder.Services.AddScoped<Passwordservice>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISMSService, Smsservice>();
-builder.Services.AddScoped<IEmailService, EmailService>();
+
 
 
 

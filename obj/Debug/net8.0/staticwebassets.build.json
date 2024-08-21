@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WplTAOoP7Msr8veWq7e/Od4xc4fK+HsPO26zIldEJhU=",
+  "Hash": "N9ePepdr5xyaJC5Zet2kF8hMkAIdWxhVjPFdW2r1tFE=",
   "Source": "CineMatrix_API",
   "BasePath": "_content/CineMatrix_API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CineMatrix_API\\wwwroot",
       "Source": "CineMatrix_API",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\11082024_2fdd077203c649cf900623f3c36c1d69.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\11082024_2fdd077203c649cf900623f3c36c1d69.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/11082024_2fdd077203c649cf900623f3c36c1d69.jpg",
       "AssetKind": "All",
@@ -36,10 +36,10 @@
       "OriginalItemSpec": "wwwroot\\images\\11082024_2fdd077203c649cf900623f3c36c1d69.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\3idiots.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\3idiots.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/3idiots.jpg",
       "AssetKind": "All",
@@ -55,10 +55,10 @@
       "OriginalItemSpec": "wwwroot\\images\\3idiots.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\aamirkhan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\aamirkhan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/aamirkhan.jpg",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aamirkhan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\abhishek.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\abhishek.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/abhishek.jpg",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\images\\abhishek.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\aishwaryaraibachchan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\aishwaryaraibachchan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/aishwaryaraibachchan.jpg",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aishwaryaraibachchan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\akshaykumar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\akshaykumar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/akshaykumar.jpg",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\images\\akshaykumar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\aliabhat.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\aliabhat.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/aliabhat.jpg",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\images\\aliabhat.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\amitabhbachchan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\amitabhbachchan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/amitabhbachchan.jpg",
       "AssetKind": "All",
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "wwwroot\\images\\amitabhbachchan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\amolpalekar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\amolpalekar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/amolpalekar.jpg",
       "AssetKind": "All",
@@ -188,10 +188,10 @@
       "OriginalItemSpec": "wwwroot\\images\\amolpalekar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\andaazapnaapna.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\andaazapnaapna.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/andaazapnaapna.jpg",
       "AssetKind": "All",
@@ -207,10 +207,10 @@
       "OriginalItemSpec": "wwwroot\\images\\andaazapnaapna.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\andhadhun.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\andhadhun.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/andhadhun.jpg",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot\\images\\andhadhun.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\anil.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\anil.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/anil.jpg",
       "AssetKind": "All",
@@ -245,10 +245,10 @@
       "OriginalItemSpec": "wwwroot\\images\\anil.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\anjaniputra.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\anjaniputra.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/anjaniputra.jpg",
       "AssetKind": "All",
@@ -264,10 +264,10 @@
       "OriginalItemSpec": "wwwroot\\images\\anjaniputra.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\anupamkher.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\anupamkher.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/anupamkher.jpg",
       "AssetKind": "All",
@@ -283,10 +283,10 @@
       "OriginalItemSpec": "wwwroot\\images\\anupamkher.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\anushka.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\anushka.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/anushka.jpg",
       "AssetKind": "All",
@@ -302,10 +302,10 @@
       "OriginalItemSpec": "wwwroot\\images\\anushka.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\appu.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\appu.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/appu.jpg",
       "AssetKind": "All",
@@ -321,10 +321,10 @@
       "OriginalItemSpec": "wwwroot\\images\\appu.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\asin.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\asin.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/asin.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\images\\asin.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\avengers.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\avengers.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/avengers.jpg",
       "AssetKind": "All",
@@ -359,10 +359,10 @@
       "OriginalItemSpec": "wwwroot\\images\\avengers.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ayeshatakia.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ayeshatakia.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ayeshatakia.jpg",
       "AssetKind": "All",
@@ -378,10 +378,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ayeshatakia.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ayushmannkhurrana.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ayushmannkhurrana.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ayushmannkhurrana.jpg",
       "AssetKind": "All",
@@ -397,10 +397,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ayushmannkhurrana.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\babydeol.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\babydeol.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/babydeol.jpg",
       "AssetKind": "All",
@@ -416,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\images\\babydeol.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\backtothefuture.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\backtothefuture.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/backtothefuture.jpg",
       "AssetKind": "All",
@@ -435,10 +435,10 @@
       "OriginalItemSpec": "wwwroot\\images\\backtothefuture.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\badhaai.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\badhaai.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/badhaai.jpg",
       "AssetKind": "All",
@@ -454,10 +454,10 @@
       "OriginalItemSpec": "wwwroot\\images\\badhaai.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\badlapur.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\badlapur.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/badlapur.jpg",
       "AssetKind": "All",
@@ -473,10 +473,10 @@
       "OriginalItemSpec": "wwwroot\\images\\badlapur.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\bajiraomastani.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\bajiraomastani.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/bajiraomastani.jpg",
       "AssetKind": "All",
@@ -492,10 +492,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bajiraomastani.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\bajrangi.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\bajrangi.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/bajrangi.jpg",
       "AssetKind": "All",
@@ -511,10 +511,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bajrangi.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\barbie.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\barbie.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/barbie.jpg",
       "AssetKind": "All",
@@ -530,10 +530,10 @@
       "OriginalItemSpec": "wwwroot\\images\\barbie.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\barfi.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\barfi.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/barfi.jpg",
       "AssetKind": "All",
@@ -549,10 +549,10 @@
       "OriginalItemSpec": "wwwroot\\images\\barfi.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\beautifulmind.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\beautifulmind.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/beautifulmind.jpg",
       "AssetKind": "All",
@@ -568,10 +568,10 @@
       "OriginalItemSpec": "wwwroot\\images\\beautifulmind.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\bellbottom.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\bellbottom.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/bellbottom.jpg",
       "AssetKind": "All",
@@ -587,10 +587,10 @@
       "OriginalItemSpec": "wwwroot\\images\\bellbottom.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\biglebowski.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\biglebowski.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/biglebowski.jpg",
       "AssetKind": "All",
@@ -606,10 +606,10 @@
       "OriginalItemSpec": "wwwroot\\images\\biglebowski.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\casablanca.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\casablanca.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/casablanca.jpg",
       "AssetKind": "All",
@@ -625,10 +625,10 @@
       "OriginalItemSpec": "wwwroot\\images\\casablanca.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\chashmebuddoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\chashmebuddoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/chashmebuddoor.jpg",
       "AssetKind": "All",
@@ -644,10 +644,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chashmebuddoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\chennaiexpress.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\chennaiexpress.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/chennaiexpress.jpg",
       "AssetKind": "All",
@@ -663,10 +663,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chennaiexpress.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\chhichhore.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\chhichhore.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/chhichhore.jpg",
       "AssetKind": "All",
@@ -682,10 +682,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chhichhore.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\chhotisibaat.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\chhotisibaat.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/chhotisibaat.jpg",
       "AssetKind": "All",
@@ -701,10 +701,10 @@
       "OriginalItemSpec": "wwwroot\\images\\chhotisibaat.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\Cillian.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\Cillian.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/Cillian.jpg",
       "AssetKind": "All",
@@ -720,10 +720,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Cillian.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\darkknight.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\darkknight.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/darkknight.jpg",
       "AssetKind": "All",
@@ -739,10 +739,10 @@
       "OriginalItemSpec": "wwwroot\\images\\darkknight.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\david dhawan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\david dhawan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/david dhawan.jpg",
       "AssetKind": "All",
@@ -758,10 +758,10 @@
       "OriginalItemSpec": "wwwroot\\images\\david dhawan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\deeptinaval.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\deeptinaval.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/deeptinaval.jpg",
       "AssetKind": "All",
@@ -777,10 +777,10 @@
       "OriginalItemSpec": "wwwroot\\images\\deeptinaval.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\departed.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\departed.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/departed.jpg",
       "AssetKind": "All",
@@ -796,10 +796,10 @@
       "OriginalItemSpec": "wwwroot\\images\\departed.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\dhoom2.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\dhoom2.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/dhoom2.jpg",
       "AssetKind": "All",
@@ -815,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dhoom2.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\dildhadaknedo.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\dildhadaknedo.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/dildhadaknedo.jpg",
       "AssetKind": "All",
@@ -834,10 +834,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dildhadaknedo.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\dummy.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\dummy.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/dummy.jpg",
       "AssetKind": "All",
@@ -853,10 +853,10 @@
       "OriginalItemSpec": "wwwroot\\images\\dummy.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\et.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\et.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/et.jpg",
       "AssetKind": "All",
@@ -872,10 +872,10 @@
       "OriginalItemSpec": "wwwroot\\images\\et.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\fahadfazil.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\fahadfazil.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/fahadfazil.jpg",
       "AssetKind": "All",
@@ -891,10 +891,10 @@
       "OriginalItemSpec": "wwwroot\\images\\fahadfazil.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\farooqshaikh.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\farooqshaikh.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/farooqshaikh.jpg",
       "AssetKind": "All",
@@ -910,10 +910,10 @@
       "OriginalItemSpec": "wwwroot\\images\\farooqshaikh.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\fellowship'.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\fellowship'.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/fellowship'.jpg",
       "AssetKind": "All",
@@ -929,10 +929,10 @@
       "OriginalItemSpec": "wwwroot\\images\\fellowship'.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\fightclub.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\fightclub.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/fightclub.jpg",
       "AssetKind": "All",
@@ -948,10 +948,10 @@
       "OriginalItemSpec": "wwwroot\\images\\fightclub.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\Florence.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\Florence.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/Florence.jpg",
       "AssetKind": "All",
@@ -967,10 +967,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Florence.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\forrestgump.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\forrestgump.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/forrestgump.jpg",
       "AssetKind": "All",
@@ -986,10 +986,10 @@
       "OriginalItemSpec": "wwwroot\\images\\forrestgump.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ganesh.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ganesh.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ganesh.jpg",
       "AssetKind": "All",
@@ -1005,10 +1005,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ganesh.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\gladiator.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\gladiator.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/gladiator.jpg",
       "AssetKind": "All",
@@ -1024,10 +1024,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gladiator.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\godfather.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\godfather.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/godfather.jpg",
       "AssetKind": "All",
@@ -1043,10 +1043,10 @@
       "OriginalItemSpec": "wwwroot\\images\\godfather.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\godfather2.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\godfather2.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/godfather2.jpg",
       "AssetKind": "All",
@@ -1062,10 +1062,10 @@
       "OriginalItemSpec": "wwwroot\\images\\godfather2.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\goodfellas.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\goodfellas.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/goodfellas.jpg",
       "AssetKind": "All",
@@ -1081,10 +1081,10 @@
       "OriginalItemSpec": "wwwroot\\images\\goodfellas.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\goodwillhunting.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\goodwillhunting.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/goodwillhunting.jpg",
       "AssetKind": "All",
@@ -1100,10 +1100,10 @@
       "OriginalItemSpec": "wwwroot\\images\\goodwillhunting.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\gullyboy.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\gullyboy.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/gullyboy.jpg",
       "AssetKind": "All",
@@ -1119,10 +1119,10 @@
       "OriginalItemSpec": "wwwroot\\images\\gullyboy.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\hamaal.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\hamaal.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/hamaal.jpg",
       "AssetKind": "All",
@@ -1138,10 +1138,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hamaal.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\hellobrother.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\hellobrother.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/hellobrother.jpg",
       "AssetKind": "All",
@@ -1157,10 +1157,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hellobrother.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\her.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\her.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/her.jpg",
       "AssetKind": "All",
@@ -1176,10 +1176,10 @@
       "OriginalItemSpec": "wwwroot\\images\\her.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\herapheri.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\herapheri.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/herapheri.jpg",
       "AssetKind": "All",
@@ -1195,10 +1195,10 @@
       "OriginalItemSpec": "wwwroot\\images\\herapheri.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\heropanti.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\heropanti.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/heropanti.jpg",
       "AssetKind": "All",
@@ -1214,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\images\\heropanti.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\hrithikroshan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\hrithikroshan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/hrithikroshan.jpg",
       "AssetKind": "All",
@@ -1233,10 +1233,10 @@
       "OriginalItemSpec": "wwwroot\\images\\hrithikroshan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\humaqureshi.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\humaqureshi.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/humaqureshi.jpg",
       "AssetKind": "All",
@@ -1252,10 +1252,10 @@
       "OriginalItemSpec": "wwwroot\\images\\humaqureshi.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\inception.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\inception.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/inception.jpg",
       "AssetKind": "All",
@@ -1271,10 +1271,10 @@
       "OriginalItemSpec": "wwwroot\\images\\inception.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\interstellar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\interstellar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/interstellar.jpg",
       "AssetKind": "All",
@@ -1290,10 +1290,10 @@
       "OriginalItemSpec": "wwwroot\\images\\interstellar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\irrfankhan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\irrfankhan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/irrfankhan.jpg",
       "AssetKind": "All",
@@ -1309,10 +1309,10 @@
       "OriginalItemSpec": "wwwroot\\images\\irrfankhan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\jabtakhiajan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\jabtakhiajan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/jabtakhiajan.jpg",
       "AssetKind": "All",
@@ -1328,10 +1328,10 @@
       "OriginalItemSpec": "wwwroot\\images\\jabtakhiajan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\jabwemet.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\jabwemet.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/jabwemet.jpg",
       "AssetKind": "All",
@@ -1347,10 +1347,10 @@
       "OriginalItemSpec": "wwwroot\\images\\jabwemet.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\Jacqueline.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\Jacqueline.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/Jacqueline.jpg",
       "AssetKind": "All",
@@ -1366,10 +1366,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Jacqueline.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\jallikattu.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\jallikattu.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/jallikattu.jpg",
       "AssetKind": "All",
@@ -1385,10 +1385,10 @@
       "OriginalItemSpec": "wwwroot\\images\\jallikattu.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\jaws.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\jaws.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/jaws.jpg",
       "AssetKind": "All",
@@ -1404,10 +1404,10 @@
       "OriginalItemSpec": "wwwroot\\images\\jaws.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\Jessy.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\Jessy.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/Jessy.jpg",
       "AssetKind": "All",
@@ -1423,10 +1423,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Jessy.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\JoaquinPhoenix.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\JoaquinPhoenix.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/JoaquinPhoenix.jpg",
       "AssetKind": "All",
@@ -1442,10 +1442,10 @@
       "OriginalItemSpec": "wwwroot\\images\\JoaquinPhoenix.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\johnabraham.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\johnabraham.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/johnabraham.jpg",
       "AssetKind": "All",
@@ -1461,10 +1461,10 @@
       "OriginalItemSpec": "wwwroot\\images\\johnabraham.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\juhi_chawla.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\juhi_chawla.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/juhi_chawla.jpg",
       "AssetKind": "All",
@@ -1480,10 +1480,10 @@
       "OriginalItemSpec": "wwwroot\\images\\juhi_chawla.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\jurassicpark.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\jurassicpark.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/jurassicpark.jpg",
       "AssetKind": "All",
@@ -1499,10 +1499,10 @@
       "OriginalItemSpec": "wwwroot\\images\\jurassicpark.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kaabil.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kaabil.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kaabil.jpg",
       "AssetKind": "All",
@@ -1518,10 +1518,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kaabil.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kabirkhan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kabirkhan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kabirkhan.jpg",
       "AssetKind": "All",
@@ -1537,10 +1537,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kabirkhan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kalkikoechlin.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kalkikoechlin.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kalkikoechlin.jpg",
       "AssetKind": "All",
@@ -1556,10 +1556,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kalkikoechlin.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kapoorandsons.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kapoorandsons.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kapoorandsons.jpg",
       "AssetKind": "All",
@@ -1575,10 +1575,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kapoorandsons.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kareenakapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kareenakapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kareenakapoor.jpg",
       "AssetKind": "All",
@@ -1594,10 +1594,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kareenakapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\karismakapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\karismakapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/karismakapoor.jpg",
       "AssetKind": "All",
@@ -1613,10 +1613,10 @@
       "OriginalItemSpec": "wwwroot\\images\\karismakapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kashmirfiles.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kashmirfiles.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kashmirfiles.jpg",
       "AssetKind": "All",
@@ -1632,10 +1632,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kashmirfiles.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\katrinakaif.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\katrinakaif.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/katrinakaif.jpg",
       "AssetKind": "All",
@@ -1651,10 +1651,10 @@
       "OriginalItemSpec": "wwwroot\\images\\katrinakaif.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kedarnath.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kedarnath.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kedarnath.jpg",
       "AssetKind": "All",
@@ -1670,10 +1670,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kedarnath.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\Kevin.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\Kevin.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/Kevin.jpg",
       "AssetKind": "All",
@@ -1689,10 +1689,10 @@
       "OriginalItemSpec": "wwwroot\\images\\Kevin.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kgf1.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kgf1.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kgf1.jpg",
       "AssetKind": "All",
@@ -1708,10 +1708,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kgf1.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kgf2.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kgf2.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kgf2.jpg",
       "AssetKind": "All",
@@ -1727,10 +1727,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kgf2.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\koimilgaya.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\koimilgaya.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/koimilgaya.jpg",
       "AssetKind": "All",
@@ -1746,10 +1746,10 @@
       "OriginalItemSpec": "wwwroot\\images\\koimilgaya.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\kumbalanginights.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\kumbalanginights.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/kumbalanginights.jpg",
       "AssetKind": "All",
@@ -1765,10 +1765,10 @@
       "OriginalItemSpec": "wwwroot\\images\\kumbalanginights.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\laalkaptaan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\laalkaptaan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/laalkaptaan.jpg",
       "AssetKind": "All",
@@ -1784,10 +1784,10 @@
       "OriginalItemSpec": "wwwroot\\images\\laalkaptaan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\lalsinghchaddha.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\lalsinghchaddha.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/lalsinghchaddha.jpg",
       "AssetKind": "All",
@@ -1803,10 +1803,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lalsinghchaddha.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\leonardodicaprio.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\leonardodicaprio.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/leonardodicaprio.jpg",
       "AssetKind": "All",
@@ -1822,10 +1822,10 @@
       "OriginalItemSpec": "wwwroot\\images\\leonardodicaprio.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\lionking.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\lionking.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/lionking.jpg",
       "AssetKind": "All",
@@ -1841,10 +1841,10 @@
       "OriginalItemSpec": "wwwroot\\images\\lionking.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\madhuridixit.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\madhuridixit.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/madhuridixit.jpg",
       "AssetKind": "All",
@@ -1860,10 +1860,10 @@
       "OriginalItemSpec": "wwwroot\\images\\madhuridixit.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\manojbajpayee.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\manojbajpayee.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/manojbajpayee.jpg",
       "AssetKind": "All",
@@ -1879,10 +1879,10 @@
       "OriginalItemSpec": "wwwroot\\images\\manojbajpayee.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\manojkumar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\manojkumar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/manojkumar.jpg",
       "AssetKind": "All",
@@ -1898,10 +1898,10 @@
       "OriginalItemSpec": "wwwroot\\images\\manojkumar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\matrix.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\matrix.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/matrix.jpg",
       "AssetKind": "All",
@@ -1917,10 +1917,10 @@
       "OriginalItemSpec": "wwwroot\\images\\matrix.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\mattdamon.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\mattdamon.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/mattdamon.jpg",
       "AssetKind": "All",
@@ -1936,10 +1936,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mattdamon.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\mithunchakraborty.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\mithunchakraborty.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/mithunchakraborty.jpg",
       "AssetKind": "All",
@@ -1955,10 +1955,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mithunchakraborty.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\mohenjodaro.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\mohenjodaro.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/mohenjodaro.jpg",
       "AssetKind": "All",
@@ -1974,10 +1974,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mohenjodaro.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\mulk.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\mulk.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/mulk.jpg",
       "AssetKind": "All",
@@ -1993,10 +1993,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mulk.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\mungarumale.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\mungarumale.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/mungarumale.jpg",
       "AssetKind": "All",
@@ -2012,10 +2012,10 @@
       "OriginalItemSpec": "wwwroot\\images\\mungarumale.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\nammavar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\nammavar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/nammavar.jpg",
       "AssetKind": "All",
@@ -2031,10 +2031,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nammavar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\nawazuddinsiddiqui.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\nawazuddinsiddiqui.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/nawazuddinsiddiqui.jpg",
       "AssetKind": "All",
@@ -2050,10 +2050,10 @@
       "OriginalItemSpec": "wwwroot\\images\\nawazuddinsiddiqui.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\newton.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\newton.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/newton.jpg",
       "AssetKind": "All",
@@ -2069,10 +2069,10 @@
       "OriginalItemSpec": "wwwroot\\images\\newton.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\oppenheimer.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\oppenheimer.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/oppenheimer.jpg",
       "AssetKind": "All",
@@ -2088,10 +2088,10 @@
       "OriginalItemSpec": "wwwroot\\images\\oppenheimer.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\paansinghtomar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\paansinghtomar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/paansinghtomar.jpg",
       "AssetKind": "All",
@@ -2107,10 +2107,10 @@
       "OriginalItemSpec": "wwwroot\\images\\paansinghtomar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\paathshaala.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\paathshaala.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/paathshaala.jpg",
       "AssetKind": "All",
@@ -2126,10 +2126,10 @@
       "OriginalItemSpec": "wwwroot\\images\\paathshaala.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\pareshrawal.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\pareshrawal.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/pareshrawal.jpg",
       "AssetKind": "All",
@@ -2145,10 +2145,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pareshrawal.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\parmanu.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\parmanu.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/parmanu.jpg",
       "AssetKind": "All",
@@ -2164,10 +2164,10 @@
       "OriginalItemSpec": "wwwroot\\images\\parmanu.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\patelki.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\patelki.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/patelki.jpg",
       "AssetKind": "All",
@@ -2183,10 +2183,10 @@
       "OriginalItemSpec": "wwwroot\\images\\patelki.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\patipatni.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\patipatni.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/patipatni.jpg",
       "AssetKind": "All",
@@ -2202,10 +2202,10 @@
       "OriginalItemSpec": "wwwroot\\images\\patipatni.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\pooja.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\pooja.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/pooja.jpg",
       "AssetKind": "All",
@@ -2221,10 +2221,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pooja.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\preityzinta.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\preityzinta.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/preityzinta.jpg",
       "AssetKind": "All",
@@ -2240,10 +2240,10 @@
       "OriginalItemSpec": "wwwroot\\images\\preityzinta.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\prithvi.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\prithvi.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/prithvi.jpg",
       "AssetKind": "All",
@@ -2259,10 +2259,10 @@
       "OriginalItemSpec": "wwwroot\\images\\prithvi.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\priyaanand.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\priyaanand.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/priyaanand.jpg",
       "AssetKind": "All",
@@ -2278,10 +2278,10 @@
       "OriginalItemSpec": "wwwroot\\images\\priyaanand.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\pulpfiction.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\pulpfiction.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/pulpfiction.jpg",
       "AssetKind": "All",
@@ -2297,10 +2297,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pulpfiction.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\puneethrajkumar.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\puneethrajkumar.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/puneethrajkumar.jpg",
       "AssetKind": "All",
@@ -2316,10 +2316,10 @@
       "OriginalItemSpec": "wwwroot\\images\\puneethrajkumar.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\pushpakavimana.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\pushpakavimana.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/pushpakavimana.jpg",
       "AssetKind": "All",
@@ -2335,10 +2335,10 @@
       "OriginalItemSpec": "wwwroot\\images\\pushpakavimana.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\raajakumara.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\raajakumara.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/raajakumara.jpg",
       "AssetKind": "All",
@@ -2354,10 +2354,10 @@
       "OriginalItemSpec": "wwwroot\\images\\raajakumara.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\race3.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\race3.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/race3.jpg",
       "AssetKind": "All",
@@ -2373,10 +2373,10 @@
       "OriginalItemSpec": "wwwroot\\images\\race3.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\radhikaapte.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\radhikaapte.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/radhikaapte.jpg",
       "AssetKind": "All",
@@ -2392,10 +2392,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radhikaapte.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\radhikapandit.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\radhikapandit.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/radhikapandit.jpg",
       "AssetKind": "All",
@@ -2411,10 +2411,10 @@
       "OriginalItemSpec": "wwwroot\\images\\radhikapandit.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\rajahindustani.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\rajahindustani.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/rajahindustani.jpg",
       "AssetKind": "All",
@@ -2430,10 +2430,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rajahindustani.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\rajkummarrao.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\rajkummarrao.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/rajkummarrao.jpg",
       "AssetKind": "All",
@@ -2449,10 +2449,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rajkummarrao.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ranbirkapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ranbirkapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ranbirkapoor.jpg",
       "AssetKind": "All",
@@ -2468,10 +2468,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ranbirkapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ranimukerji.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ranimukerji.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ranimukerji.jpg",
       "AssetKind": "All",
@@ -2487,10 +2487,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ranimukerji.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ranveersingh.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ranveersingh.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ranveersingh.jpg",
       "AssetKind": "All",
@@ -2506,10 +2506,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ranveersingh.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\revenant.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\revenant.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/revenant.jpg",
       "AssetKind": "All",
@@ -2525,10 +2525,10 @@
       "OriginalItemSpec": "wwwroot\\images\\revenant.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\rishabshetty.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\rishabshetty.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/rishabshetty.jpg",
       "AssetKind": "All",
@@ -2544,10 +2544,10 @@
       "OriginalItemSpec": "wwwroot\\images\\rishabshetty.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ronitroy.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ronitroy.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ronitroy.jpg",
       "AssetKind": "All",
@@ -2563,10 +2563,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ronitroy.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\salmankhan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\salmankhan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/salmankhan.jpg",
       "AssetKind": "All",
@@ -2582,10 +2582,10 @@
       "OriginalItemSpec": "wwwroot\\images\\salmankhan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sardarudham.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sardarudham.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sardarudham.jpg",
       "AssetKind": "All",
@@ -2601,10 +2601,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sardarudham.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\satyamshivamsundaram.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\satyamshivamsundaram.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/satyamshivamsundaram.jpg",
       "AssetKind": "All",
@@ -2620,10 +2620,10 @@
       "OriginalItemSpec": "wwwroot\\images\\satyamshivamsundaram.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\savingprivateryan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\savingprivateryan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/savingprivateryan.jpg",
       "AssetKind": "All",
@@ -2639,10 +2639,10 @@
       "OriginalItemSpec": "wwwroot\\images\\savingprivateryan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ScarlettJohansson.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ScarlettJohansson.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ScarlettJohansson.jpg",
       "AssetKind": "All",
@@ -2658,10 +2658,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ScarlettJohansson.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shahidkapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shahidkapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shahidkapoor.jpg",
       "AssetKind": "All",
@@ -2677,10 +2677,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shahidkapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shahrukhkhan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shahrukhkhan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shahrukhkhan.jpg",
       "AssetKind": "All",
@@ -2696,10 +2696,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shahrukhkhan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shankarnag.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shankarnag.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shankarnag.jpg",
       "AssetKind": "All",
@@ -2715,10 +2715,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shankarnag.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shawshank.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shawshank.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shawshank.jpg",
       "AssetKind": "All",
@@ -2734,10 +2734,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shawshank.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shilpashetty.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shilpashetty.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shilpashetty.jpg",
       "AssetKind": "All",
@@ -2753,10 +2753,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shilpashetty.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\shraddhakapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\shraddhakapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/shraddhakapoor.jpg",
       "AssetKind": "All",
@@ -2772,10 +2772,10 @@
       "OriginalItemSpec": "wwwroot\\images\\shraddhakapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sidharthmalhotra.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sidharthmalhotra.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sidharthmalhotra.jpg",
       "AssetKind": "All",
@@ -2791,10 +2791,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sidharthmalhotra.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sikander.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sikander.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sikander.jpg",
       "AssetKind": "All",
@@ -2810,10 +2810,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sikander.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\silenceoflambs.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\silenceoflambs.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/silenceoflambs.jpg",
       "AssetKind": "All",
@@ -2829,10 +2829,10 @@
       "OriginalItemSpec": "wwwroot\\images\\silenceoflambs.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\simmba.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\simmba.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/simmba.jpg",
       "AssetKind": "All",
@@ -2848,10 +2848,10 @@
       "OriginalItemSpec": "wwwroot\\images\\simmba.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\socialnetwork.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\socialnetwork.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/socialnetwork.jpg",
       "AssetKind": "All",
@@ -2867,10 +2867,10 @@
       "OriginalItemSpec": "wwwroot\\images\\socialnetwork.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sonalibendre.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sonalibendre.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sonalibendre.jpg",
       "AssetKind": "All",
@@ -2886,10 +2886,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sonalibendre.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sridevi.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sridevi.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sridevi.jpg",
       "AssetKind": "All",
@@ -2905,10 +2905,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sridevi.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\srimurali.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\srimurali.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/srimurali.jpg",
       "AssetKind": "All",
@@ -2924,10 +2924,10 @@
       "OriginalItemSpec": "wwwroot\\images\\srimurali.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\srinidhishetty.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\srinidhishetty.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/srinidhishetty.jpg",
       "AssetKind": "All",
@@ -2943,10 +2943,10 @@
       "OriginalItemSpec": "wwwroot\\images\\srinidhishetty.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\stree.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\stree.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/stree.jpg",
       "AssetKind": "All",
@@ -2962,10 +2962,10 @@
       "OriginalItemSpec": "wwwroot\\images\\stree.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\super30.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\super30.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/super30.jpg",
       "AssetKind": "All",
@@ -2981,10 +2981,10 @@
       "OriginalItemSpec": "wwwroot\\images\\super30.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\superdeluxe.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\superdeluxe.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/superdeluxe.jpg",
       "AssetKind": "All",
@@ -3000,10 +3000,10 @@
       "OriginalItemSpec": "wwwroot\\images\\superdeluxe.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\sushantsinghrajput.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\sushantsinghrajput.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/sushantsinghrajput.jpg",
       "AssetKind": "All",
@@ -3019,10 +3019,10 @@
       "OriginalItemSpec": "wwwroot\\images\\sushantsinghrajput.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\tabu.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\tabu.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/tabu.jpg",
       "AssetKind": "All",
@@ -3038,10 +3038,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tabu.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\terminator.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\terminator.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/terminator.jpg",
       "AssetKind": "All",
@@ -3057,10 +3057,10 @@
       "OriginalItemSpec": "wwwroot\\images\\terminator.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\thondimuthalum.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\thondimuthalum.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/thondimuthalum.jpg",
       "AssetKind": "All",
@@ -3076,10 +3076,10 @@
       "OriginalItemSpec": "wwwroot\\images\\thondimuthalum.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\tigershroff.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\tigershroff.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/tigershroff.jpg",
       "AssetKind": "All",
@@ -3095,10 +3095,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tigershroff.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\tim_robbins.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\tim_robbins.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/tim_robbins.jpg",
       "AssetKind": "All",
@@ -3114,10 +3114,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tim_robbins.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\titanic.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\titanic.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/titanic.jpg",
       "AssetKind": "All",
@@ -3133,10 +3133,10 @@
       "OriginalItemSpec": "wwwroot\\images\\titanic.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\tumharisulu.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\tumharisulu.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/tumharisulu.jpg",
       "AssetKind": "All",
@@ -3152,10 +3152,10 @@
       "OriginalItemSpec": "wwwroot\\images\\tumharisulu.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\ugramm.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\ugramm.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/ugramm.jpg",
       "AssetKind": "All",
@@ -3171,10 +3171,10 @@
       "OriginalItemSpec": "wwwroot\\images\\ugramm.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\usualsuspects.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\usualsuspects.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/usualsuspects.jpg",
       "AssetKind": "All",
@@ -3190,10 +3190,10 @@
       "OriginalItemSpec": "wwwroot\\images\\usualsuspects.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\vaanikapoor.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\vaanikapoor.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/vaanikapoor.jpg",
       "AssetKind": "All",
@@ -3209,10 +3209,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vaanikapoor.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\varundhawan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\varundhawan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/varundhawan.jpg",
       "AssetKind": "All",
@@ -3228,10 +3228,10 @@
       "OriginalItemSpec": "wwwroot\\images\\varundhawan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\vickykaushal.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\vickykaushal.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/vickykaushal.jpg",
       "AssetKind": "All",
@@ -3247,10 +3247,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vickykaushal.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\vidyabalan.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\vidyabalan.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/vidyabalan.jpg",
       "AssetKind": "All",
@@ -3266,10 +3266,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vidyabalan.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\vidyasinha.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\vidyasinha.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/vidyasinha.jpg",
       "AssetKind": "All",
@@ -3285,10 +3285,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vidyasinha.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\vinodkhanna.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\vinodkhanna.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/vinodkhanna.jpg",
       "AssetKind": "All",
@@ -3304,10 +3304,10 @@
       "OriginalItemSpec": "wwwroot\\images\\vinodkhanna.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\visaranai.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\visaranai.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/visaranai.jpg",
       "AssetKind": "All",
@@ -3323,10 +3323,10 @@
       "OriginalItemSpec": "wwwroot\\images\\visaranai.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\war.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\war.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/war.jpg",
       "AssetKind": "All",
@@ -3342,10 +3342,10 @@
       "OriginalItemSpec": "wwwroot\\images\\war.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\warchhod.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\warchhod.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/warchhod.jpg",
       "AssetKind": "All",
@@ -3361,10 +3361,10 @@
       "OriginalItemSpec": "wwwroot\\images\\warchhod.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\yamigautam.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\yamigautam.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/yamigautam.jpg",
       "AssetKind": "All",
@@ -3380,10 +3380,10 @@
       "OriginalItemSpec": "wwwroot\\images\\yamigautam.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\yash.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\yash.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/yash.jpg",
       "AssetKind": "All",
@@ -3399,10 +3399,10 @@
       "OriginalItemSpec": "wwwroot\\images\\yash.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\zeenataman.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\zeenataman.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/zeenataman.jpg",
       "AssetKind": "All",
@@ -3418,10 +3418,10 @@
       "OriginalItemSpec": "wwwroot\\images\\zeenataman.jpg"
     },
     {
-      "Identity": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\images\\zindaginalmilegidobara.jpg",
+      "Identity": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\images\\zindaginalmilegidobara.jpg",
       "SourceId": "CineMatrix_API",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\cinematrix-app\\cinematrix-api\\wwwroot\\",
+      "ContentRoot": "D:\\cinematrix-app\\cinematrix_api\\wwwroot\\",
       "BasePath": "_content/CineMatrix_API",
       "RelativePath": "images/zindaginalmilegidobara.jpg",
       "AssetKind": "All",
