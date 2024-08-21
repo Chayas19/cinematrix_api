@@ -32,8 +32,9 @@ namespace CineMatrix_API.Validations
 
 
             RuleFor(x => x.PhoneNumber)
-                  .NotEmpty().WithMessage("Phone number is required");
-               
+                  .NotEmpty().WithMessage("Phone number is required")
+                  .Must(BeValidPhoneNumber).WithMessage("Phone number must be exactly 10 digits long.");   
+
 
         }
 

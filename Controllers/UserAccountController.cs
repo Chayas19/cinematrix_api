@@ -20,12 +20,12 @@ namespace CineMatrix_API.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
-        private readonly OtpService _otpService; 
+        private readonly OtpService _otpService;
         private readonly ISMSService _smsService;
         private readonly IEmailService _emailSender;
         private readonly Passwordservice _passwordService;
         private readonly JwtService _jwtService;
-        private readonly IValidator<UsercreationDTO> _validator; 
+        private readonly IValidator<UsercreationDTO> _validator;
 
         public UserAccountController(
             IMapper mapper,
@@ -45,8 +45,8 @@ namespace CineMatrix_API.Controllers
             _emailSender = emailSender;
             _passwordService = passwordService;
             _jwtService = jwtService;
-            _validator = validator; 
-            
+            _validator = validator;
+
 
         }
 
@@ -68,44 +68,71 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Password fields cannot be empty and must match.");
             }
 
-
-
-            var existingUser = await _context.Users
-                .FirstOrDefaultAsync(u => u.Email == userCreationDto.Email || u.PhoneNumber == userCreationDto.PhoneNumber);
-            if (existingUser != null)
+            if (userCreationDto.Email == "string" ||
+             userCreationDto.Password == "string" ||
+            userCreationDto.ConfirmPassword == "string" ||
+            userCreationDto.PhoneNumber < 0 ||
+            userCreationDto.Name == "string")
             {
-                return BadRequest("User with the provided email or phone number already exists.");
+                return BadRequest("Invalid input data");
+
             }
-
-            var hashedPassword = _passwordService.HashPassword(userCreationDto.Password);
-
-      
-            var user = new User
-            {
-                Name = userCreationDto.Name,
-                Email = userCreationDto.Email,
-                Password = hashedPassword,
-                PhoneNumber = userCreationDto.PhoneNumber,
-                IsEmailVerified = false,
-                IsPhonenumberVerified = false,
-                Verificationstatus = "Pending"
-            };
-
-            await _context.Users.AddAsync(user);
-            await _context.SaveChangesAsync();
-
-            var defaultRole = RoleType.Guest;
-            var userRole = new UserRoles
-            {
-                UserId = user.Id,
-                Role = defaultRole.ToString()
-            };
-            await _context.UserRoles.AddAsync(userRole);
-           // await _context.SaveChangesAsync();
-
           
-            return Ok("User account is created successfully. Please verify your email " +
-                " complete registration successfully.");
+
+             
+
+           
+          using var transaction = await _context.Database.BeginTransactionAsync();
+
+            try
+            {
+
+                var existingUser = await _context.Users
+                    .FirstOrDefaultAsync(u => u.Email == userCreationDto.Email || u.PhoneNumber == userCreationDto.PhoneNumber);
+                if (existingUser != null)
+                {
+                    await transaction.RollbackAsync();
+                    return BadRequest("User with the provided email or phone number already exists.");
+                }
+
+                var hashedPassword = _passwordService.HashPassword(userCreationDto.Password);
+
+
+                var user = new User
+                {
+                    Name = userCreationDto.Name,
+                    Email = userCreationDto.Email,
+                    Password = hashedPassword,
+                    PhoneNumber = userCreationDto.PhoneNumber,
+                    IsEmailVerified = false,
+                    IsPhonenumberVerified = false,
+                    Verificationstatus = "Pending"
+                };
+
+                await _context.Users.AddAsync(user);
+                await _context.SaveChangesAsync();
+
+                var defaultRole = RoleType.Guest;
+                var userRole = new UserRoles
+                {
+                    UserId = user.Id,
+                    Role = defaultRole.ToString()
+                };
+                await _context.UserRoles.AddAsync(userRole);
+                await _context.SaveChangesAsync();
+
+                await  transaction.CommitAsync();   
+
+                return Ok("User account is created successfully. Please verify your email " +
+                    " complete registration successfully.");
+            }
+            catch (Exception ex)
+            {
+
+                await transaction.RollbackAsync();      
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+
+            }
         }
         
         
