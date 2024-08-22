@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text;
 using CineMatrix_API;
 using CineMatrix_API.Filters;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,30 +18,24 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>());
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>());
+builder.Services.AddFluentValidation(fv =>
+    fv.RegisterValidatorsFromAssemblyContaining<PaginationDTOValidator>());
+;
 
 
 
-// Configure database context
+
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Register services
+
 builder.Services.AddScoped<OtpService>();
 builder.Services.AddScoped<Passwordservice>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISMSService, Smsservice>();
 
 
-
-
-builder.Services.AddControllers(options =>
-{
-    // Register the exception filter globally
-    options.Filters.Add<ExceptionFilter>();
-});
-
-
-// Add AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
 // Configure CORS
@@ -54,7 +50,7 @@ builder.Services.AddCors(options =>
         });
 });
 
-// Configure JWT settings
+
 var jwtSection = builder.Configuration.GetSection("Jwt");
 var issuer = jwtSection["Issuer"];
 var audience = jwtSection["Audience"];
@@ -68,13 +64,12 @@ builder.Services.AddAuthorization(options =>
 });
 
 
-// Register JwtService with the required parameters using a factory pattern
 builder.Services.AddScoped<JwtService>(provider =>
 {
     return new JwtService(key, issuer, audience, accessTokenExpirationMinutes);
 });
 
-// Configure JWT Authentication
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -98,25 +93,29 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen((c =>
 {
+   
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "CineMatrix API", Version = "v1" });
     c.EnableAnnotations();
+
+
 }));
+builder.Services.AddSwaggerExamplesFromAssemblyOf<PersonCreatioExample>();
+
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.UseStaticFiles(); // This line enables serving static files from wwwroot
+app.UseStaticFiles(); 
 
 app.UseHttpsRedirection();
 
 app.UseCors("AllowAll"); // Use CORS policy
 
-app.UseAuthentication(); // Enable authentication
+app.UseAuthentication(); 
 app.UseAuthorization();
 
 app.MapControllers();

@@ -15,6 +15,6 @@ namespace CineMatrix_API.DTOs
         [Required]
         public string Picture { get; set; }
 
-        public string ImageUrl { get; set; }
+        public string PictureUrl { get; set; }
     }
 }

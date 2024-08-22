@@ -1,11 +1,15 @@
 ﻿using AutoMapper;
 using CineMatrix_API;
 using CineMatrix_API.DTOs;
+using CineMatrix_API.Filters;
 using CineMatrix_API.Helpers;
 using CineMatrix_API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PayPalCheckoutSdk.Orders;
+using Swashbuckle.AspNetCore.Annotations;
+using Swashbuckle.AspNetCore.Filters;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -22,6 +26,8 @@ public class ActorsController : ControllerBase
 
     [HttpGet]
     //actor
+    [SwaggerOperation(Summary = "Get a list of actors",
+                          Description = "Retrieves all the list of actors")]
     public async Task<IActionResult> Get([FromQuery] PaginationDTO pagination)
     {
         try
@@ -64,22 +70,35 @@ public class ActorsController : ControllerBase
         }
     }
 
-
-
     [HttpGet("{id}", Name = "getactor")]
     public async Task<ActionResult<PersonDTO>> GetById(int id)
     {
-        var actor = await _context.Actors.FirstOrDefaultAsync(x => x.Id == id);
+        var actor = await _context.Actors.Include(a => a.MoviesActors)
+                                         .FirstOrDefaultAsync(a => a.Id == id);
         if (actor == null)
         {
-            return NotFound(new { message = $"Actor with ID {id} not found." });
+            return NotFound(new { message = $"Actor wth ID {id} not found" });
+
         }
-        return _mapper.Map<PersonDTO>(actor);
+        var actordto = _mapper.Map<PersonDTO>(actor);
+        if (actordto.PictureUrl != null && actordto.PictureUrl.Length > 0)
+        {
+
+            actordto.PictureUrl = $"{Convert.ToBase64String(actor.Picture)}";
+
+        }
+        else
+        {
+            actordto.PictureUrl = "null";
+        }
+
+        return Ok(new { success = true, data = actordto }); 
     }
 
-    [HttpPost]
+
+        [HttpPost]
     // [Authorize(Roles = "Admin")]
-    [HttpPost]
+
     public async Task<ActionResult> Post([FromForm] PersonCreationDTO personCreationDto)
     {
         if (personCreationDto.Picture != null && personCreationDto.Picture.Length > 0)
@@ -94,7 +113,7 @@ public class ActorsController : ControllerBase
 
             var pictureUrl = await SaveFileAsync(personCreationDto.Picture);
 
-            // Convert DateOnly from string
+    
             var dateOfBirth = DateOnly.Parse(personCreationDto.DateOfBirth);
 
             var actor = new Actor
@@ -106,7 +125,7 @@ public class ActorsController : ControllerBase
             };
 
             _context.Actors.Add(actor);
-            await _context.SaveChangesAsync();
+           // await _context.SaveChangesAsync();
 
             var actorDto = _mapper.Map<ActorDTO>(actor);
 
