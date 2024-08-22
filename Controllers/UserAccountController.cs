@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -77,12 +78,8 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Invalid input data");
 
             }
-          
 
-             
-
-           
-          using var transaction = await _context.Database.BeginTransactionAsync();
+            using var transaction = await _context.Database.BeginTransactionAsync();
 
             try
             {
@@ -121,7 +118,7 @@ namespace CineMatrix_API.Controllers
                 await _context.UserRoles.AddAsync(userRole);
                 await _context.SaveChangesAsync();
 
-                await  transaction.CommitAsync();   
+                await transaction.CommitAsync();
 
                 return Ok("User account is created successfully. Please verify your email " +
                     " complete registration successfully.");
@@ -129,18 +126,21 @@ namespace CineMatrix_API.Controllers
             catch (Exception ex)
             {
 
-                await transaction.RollbackAsync();      
+                await transaction.RollbackAsync();
                 return StatusCode(500, $"Internal server error: {ex.Message}");
 
             }
         }
-        
-        
-        [HttpPost("verify-email")]
 
+
+        [HttpPost("verify-email")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [SwaggerOperation(Summary = "Verify Email using OTP",
+                          Description = "Verifies a user's email using an OTP. OTPType is optional and defaults to EmailVerification.")]
         public async Task<IActionResult> VerifyEmail([FromBody] OTPVerificationDTO otpVerificationDto)
         {
-           
+
             if (otpVerificationDto == null)
             {
                 return BadRequest("OTP verification data is not valid.");
@@ -154,7 +154,7 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Invalid user.");
             }
 
-     
+
             var otp = await _context.OTP
                 .FirstOrDefaultAsync(o => o.UserId == user.Id
                                            && o.Code == otpVerificationDto.Code
@@ -183,38 +183,12 @@ namespace CineMatrix_API.Controllers
             return Ok("Email verified successfully. registration is completed successfully");
         }
 
-     
-
-        [HttpPost("send-phone-otp")]
-        public async Task<IActionResult> SendPhoneOtp([FromBody] PhoneverificationDTO phoneVerificationRequestDto)
-        {
-            if (string.IsNullOrEmpty(phoneVerificationRequestDto.PhoneNumber.ToString()))
-            {
-                return BadRequest("Phone number is required.");
-            }
-
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.PhoneNumber == phoneVerificationRequestDto.PhoneNumber);
-            if (user == null || user.IsPhonenumberVerified)
-            {
-                return BadRequest("User not found or phone number already verified.");
-            }
-
-            var phoneOtpCode = await _otpService.GenerateOTP();
-            await _otpService.SaveOtpAsync(user.Id, phoneOtpCode, OTPType.Phonenumberverification);
-            await _smsService.SendOtpSmsAsync(phoneVerificationRequestDto.PhoneNumber.ToString(), phoneOtpCode);
-
-            return Ok("OTP sent to phone number. Please verify your phone number.");
-        }
-        [HttpPost("verify-phone-number")]
-
-
-     
 
         [HttpPost("resend-email-otp")]
 
         public async Task<IActionResult> ResendEmailOtp([FromBody] ResendOtpDTO resendOtpDto)
         {
-        
+
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == resendOtpDto.email);
             if (user == null)
             {
@@ -234,31 +208,7 @@ namespace CineMatrix_API.Controllers
             return Ok("New OTP sent to your email.");
         }
 
-       
 
-        [HttpPost("resend-phone-otp")]
-        public async Task<IActionResult> ResendPhoneOtp([FromBody] ResendOtpDTO resendOtpDto)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == resendOtpDto.UserId);
-            if (user == null)
-            {
-                return BadRequest("Invalid user.");
-            }
-
-            if (user.IsPhonenumberVerified)
-            {
-                return BadRequest("Phone number is already verified.");
-            }
-
-            // Generate and save a new OTP
-            var newOtpCode = await _otpService.GenerateOTP();
-            await _otpService.SaveOtpAsync(user.Id, newOtpCode, OTPType.Phonenumberverification);
-
-            // Send the OTP via SMS
-            await _smsService.SendOtpSmsAsync(user.PhoneNumber.ToString(), newOtpCode);
-
-            return Ok("New OTP sent to your phone number.");
-        }
 
         [HttpPost("send-email-otp")]
 
@@ -301,8 +251,8 @@ namespace CineMatrix_API.Controllers
                 {
                     return BadRequest("Email and password are required.");
                 }
-  
-                 var user = await _context.Users.Include(u => u.Name).FirstOrDefaultAsync(u => u.Email == loginDto.Email);
+
+                var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginDto.Email);
                 if (user == null || !_passwordService.VerifyPassword(loginDto.Password, user.Password))
                 {
                     return Unauthorized("Invalid email or password.");
@@ -312,7 +262,7 @@ namespace CineMatrix_API.Controllers
                 var refreshToken = _jwtService.GenerateRefreshToken();
 
                 user.RefreshToken = refreshToken;
-                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMinutes(60); 
+                user.RefreshTokenExpiryTime = DateTime.UtcNow.AddMinutes(60);
                 _context.Users.Update(user);
 
                 var refreshTokenEntity = new Refreshtoken
@@ -332,26 +282,26 @@ namespace CineMatrix_API.Controllers
                     name = user.Name,
                     RefreshToken = refreshToken,
                     Message = "Login successful."
-                }); 
+                });
             }
             catch (ArgumentNullException ex)
             {
-               
+
                 return BadRequest($"Invalid input: {ex.Message}");
             }
             catch (InvalidOperationException ex)
             {
-               
+
                 return StatusCode(500, $"Operation error: {ex.Message}");
             }
             catch (DbUpdateException ex)
             {
-               
+
                 return StatusCode(500, $"Database update error: {ex.Message}");
             }
             catch (Exception ex)
             {
-               
+
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
         }
@@ -405,6 +355,11 @@ namespace CineMatrix_API.Controllers
             });
         }
         [HttpPost("forgot-password")]
+        [SwaggerOperation(Summary = "Request a password reset link",
+                           Description = "Generates a password reset token and sends a reset link to the user's email."
+         )]
+        [SwaggerResponse(StatusCodes.Status200OK, "Password reset link has been sent to your email.")]
+        [SwaggerResponse(StatusCodes.Status400BadRequest, "User with the provided email does not exist.")]
         public async Task<IActionResult> ForgotPassword([FromBody] ForgotPasswordDTO forgotPasswordDto)
         {
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == forgotPasswordDto.Email);
@@ -415,26 +370,30 @@ namespace CineMatrix_API.Controllers
 
             var resetToken = Guid.NewGuid().ToString();
             user.PasswordResetToken = resetToken;
-            user.PasswordResetTokenExpiry = DateTime.UtcNow.AddHours(1); 
+            user.PasswordResetTokenExpiry = DateTime.UtcNow.AddHours(1);
 
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
 
-            var resetUrl = $"http://localhost:4200/resetpassword?token={resetToken}"; 
+            var resetUrl = $"http://localhost:4200/resetpassword?token={resetToken}";
             await _emailSender.SendPasswordResetLinkAsync(user.Email, resetToken);
 
             return Ok("Password reset link has been sent to your email.");
         }
 
         [HttpPost("reset-password")]
-        public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordDTO resetPasswordDto)
+        [SwaggerOperation(
+                         Summary = "Reset the user's password",
+                      Description = "Resets the user's password using the provided token and new password."
+         )]
+        public async Task<IActionResult> ResetPassword([FromQuery] string token, [FromBody] ResetPasswordDTO resetPasswordDto)
         {
             if (resetPasswordDto.NewPassword != resetPasswordDto.ConfirmPassword)
             {
                 return BadRequest("Passwords do not match.");
             }
 
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.PasswordResetToken == resetPasswordDto.ResetToken && u.PasswordResetTokenExpiry > DateTime.UtcNow);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.PasswordResetToken == token && u.PasswordResetTokenExpiry > DateTime.UtcNow);
             if (user == null)
             {
                 return BadRequest("Invalid or expired reset token.");
@@ -443,7 +402,7 @@ namespace CineMatrix_API.Controllers
             var hashedPassword = _passwordService.HashPassword(resetPasswordDto.NewPassword);
             user.Password = hashedPassword;
             user.PasswordResetToken = null;
-            user.PasswordResetTokenExpiry = null; 
+            user.PasswordResetTokenExpiry = null;
 
             _context.Users.Update(user);
             await _context.SaveChangesAsync();
@@ -451,47 +410,7 @@ namespace CineMatrix_API.Controllers
             return Ok("Password has been reset successfully.");
         }
 
-        // GET api/useraccount/details
-        [HttpGet("details")]
-        [Authorize] 
-
-        public async Task<IActionResult> GetUserDetails()
-        {
-           
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-            if (userId == null)
-            {
-                return Unauthorized("User not found.");
-            }
-
-            var user = await _context.Users
-                .Include(u => u.Roles) 
-                .Include(u => u.Subscriptions)
-                .Include(u => u.Payments)
-                .Include(u => u.Reviews)
-                .Include(u => u.OtpCodes)
-                .Include(u => u.RefreshTokens)
-                .Include(u => u.WatchHistories)
-                .FirstOrDefaultAsync(u => u.Id.ToString() == userId);
-
-            if (user == null)
-            {
-                return NotFound("User not found.");
-            }
-
-
-            var userDetailsDto = new UserDetailsDTO
-            {
-                Id = user.Id,
-                Name = user.Name,
-                Email = user.Email,
-                PhoneNumber = user.PhoneNumber,
-                IsEmailVerified = user.IsEmailVerified,
-            };
-
-            return Ok(userDetailsDto);
-        }
+   
 
     }
 }

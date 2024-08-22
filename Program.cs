@@ -8,6 +8,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -95,7 +96,11 @@ builder.Services.AddAuthentication(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen((c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "CineMatrix API", Version = "v1" });
+    c.EnableAnnotations();
+}));
 
 var app = builder.Build();
 
