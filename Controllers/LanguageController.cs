@@ -5,6 +5,7 @@ using CineMatrix_API.Helpers;
 using CineMatrix_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -19,7 +20,11 @@ public class LanguageController : ControllerBase
         this.mapper = mapper;
     }
 
+
     [HttpGet]
+    [SwaggerOperation(Summary = "Get all languages",
+                   Description = "Retrieves a paginated list of all languages.")]
+
     public async Task<ActionResult<List<LanguageDTO>>> Get([FromQuery] PaginationDTO pagination)
     {
         var queryable = context.Languages.AsQueryable();
@@ -29,7 +34,10 @@ public class LanguageController : ControllerBase
         return Ok(languageDTOs);
     }
 
+
     [HttpGet("{id}", Name = "getLanguage")]
+    [SwaggerOperation(Summary = "Get a language by ID",
+                   Description = "Retrieves the details of a language based on the provided ID.")]
     public async Task<ActionResult<LanguageDTO>> GetById(int id)
     {
         var language = await context.Languages.FirstOrDefaultAsync(x => x.Id == id);
@@ -41,6 +49,8 @@ public class LanguageController : ControllerBase
     }
 
     [HttpPost]
+    [SwaggerOperation(Summary = "Create a new language",
+                   Description = "Creates a new language with the specified details. Returns a conflict status if a language with the same name already exists.")]
     public async Task<ActionResult> Post([FromBody] LanguageCreationDTO languageCreationDto)
     {
         if (languageCreationDto == null)
@@ -85,6 +95,8 @@ public class LanguageController : ControllerBase
     }
 
     [HttpPut("{id}")]
+    [SwaggerOperation(Summary = "Update an existing language",
+                   Description = "Updates the details of an existing language based on the provided ID. Returns a conflict status if a language with the same name exists.")]
     public async Task<IActionResult> UpdateLanguage(int id, [FromBody] LanguageCreationDTO languageUpdateDto)
     {
         try
@@ -122,6 +134,8 @@ public class LanguageController : ControllerBase
     }
 
     [HttpDelete("{id}")]
+    [SwaggerOperation(Summary = "Delete a language",
+                   Description = "Deletes a language based on the provided ID.")]
     public async Task<IActionResult> DeleteLanguage(int id)
     {
         try

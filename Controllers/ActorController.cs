@@ -70,7 +70,9 @@ public class ActorsController : ControllerBase
         }
     }
 
-    [HttpGet("{id}", Name = "getactor")]
+    [HttpGet("{id}", Name = "GetActor")]
+    [SwaggerOperation(Summary = "Get the specific user list by their Id",
+                          Description = "Retrieves a specific actor by their unique ID")]
     public async Task<ActionResult<PersonDTO>> GetById(int id)
     {
         var actor = await _context.Actors.Include(a => a.MoviesActors)
@@ -98,7 +100,8 @@ public class ActorsController : ControllerBase
 
         [HttpPost]
     // [Authorize(Roles = "Admin")]
-
+    [SwaggerOperation(Summary = "Create a new actor",
+                          Description = "Creates a new actor by providing details such as name, biography, date of birth, and an picture")]
     public async Task<ActionResult> Post([FromForm] PersonCreationDTO personCreationDto)
     {
         if (personCreationDto.Picture != null && personCreationDto.Picture.Length > 0)
@@ -141,6 +144,9 @@ public class ActorsController : ControllerBase
 
     [HttpPut("{id}")]
     //[Authorize(Roles = "Admin")]
+    [SwaggerOperation(Summary = "Update an existing actor",
+                   Description = "Updates the details of an existing actor, such as name, biography, date of birth, and picture.")]
+
     public async Task<IActionResult> UpdateActor(int id, [FromForm] PersonCreationDTO personUpdateDto)
     {
         var actor = await _context.Actors.FindAsync(id);
@@ -151,24 +157,26 @@ public class ActorsController : ControllerBase
 
         actor.Name = personUpdateDto.Name ?? actor.Name;
         actor.Biography = personUpdateDto.Biography ?? actor.Biography;
-
         if (!string.IsNullOrEmpty(personUpdateDto.DateOfBirth))
         {
-            actor.Dateofbirth = DateOnly.Parse(personUpdateDto.DateOfBirth);
-        }
+            try
+            {
 
+                var dateofbirth = DateOnly.Parse(personUpdateDto.DateOfBirth);  
+                actor.Dateofbirth = dateofbirth;    
+
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest(new { message = "Invalid date format for DateOfBirth." });
+            }
+
+        }
+       
         if (personUpdateDto.Picture != null)
         {
             var pictureUrl = await SaveFileAsync(personUpdateDto.Picture);
-
-            if (!string.IsNullOrEmpty(actor.PictureUrl))
-            {
-                var existingFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", actor.PictureUrl);
-                if (System.IO.File.Exists(existingFilePath))
-                {
-                    System.IO.File.Delete(existingFilePath);
-                }
-            }
 
             actor.PictureUrl = pictureUrl;
         }
@@ -182,7 +190,10 @@ public class ActorsController : ControllerBase
 
 
     [HttpDelete("{id}")]
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
+    [SwaggerOperation(Summary = "Delete an actor",
+                   Description = "Deletes an actor based on the provided identifier.")]
+
     public async Task<IActionResult> DeleteActor(int id)
     {
         var actor = await _context.Actors.FindAsync(id);
@@ -231,6 +242,9 @@ public class ActorsController : ControllerBase
 
 
     [HttpGet("movies-by-actor/{actorId}")]
+    [SwaggerOperation(Summary = "Get an actor by ID",
+                   Description = "Retrieves the details of an actor based on the provided identifier.")]
+
     public async Task<ActionResult<List<MovieDTO>>> GetMoviesByActor(int actorId)
     {
         var movies = await _context.MovieActors
@@ -249,6 +263,9 @@ public class ActorsController : ControllerBase
     }
 
     [HttpGet("movies-by-actor-name")]
+    [SwaggerOperation(Summary = "Get an actor by name",
+                   Description = "Retrieves the details of an actor based on the provided name.")]
+
     public async Task<ActionResult<List<MovieDTO>>> GetMoviesByActorName([FromQuery] string actorName)
     {
         if (string.IsNullOrWhiteSpace(actorName))

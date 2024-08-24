@@ -18,10 +18,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>());
 builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>());
-builder.Services.AddFluentValidation(fv =>
-    fv.RegisterValidatorsFromAssemblyContaining<PaginationDTOValidator>());
-;
-
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PaginationDTOValidator>());
+builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>());
 
 
 

@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -26,7 +27,10 @@ namespace CineMatrix_API.Controllers
 
         // GET: api/genres
         [HttpGet]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] 
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)] 
+        [SwaggerOperation(Summary = "Get all genres",
+                   Description = "Retrieves a list of all genres.")]
+
         public async Task<ActionResult<List<GenreDTO>>> Get()
         {
            
@@ -41,7 +45,10 @@ namespace CineMatrix_API.Controllers
 
         // GET: api/genres/{id}
         [HttpGet("{id:int}", Name = "getGenre")]
-        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [SwaggerOperation(Summary = "Get a genre by ID",
+                   Description = "Retrieves the details of a genre based on the provided ID.")]
+
+        // [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<ActionResult<GenreDTO>> GetByID(int id)
         {
         
@@ -62,6 +69,9 @@ namespace CineMatrix_API.Controllers
 
         // POST: api/genres
         [HttpPost]
+        [SwaggerOperation(Summary = "Create a new genre",
+                   Description = "Creates a new genre with the specified details. Returns a conflict status if a genre with the same name already exists.")]
+
         public async Task<ActionResult> Post([FromBody] GenreCreationDTO genreCreationDto)
         {
             
@@ -95,6 +105,10 @@ namespace CineMatrix_API.Controllers
 
         // PUT: api/genres/{id}
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Update an existing genre",
+                   Description = "Updates the details of an existing genre based on the provided ID. Returns a conflict status if a genre with the same name exists.")]
+
+
         public async Task<ActionResult> Put(int id, [FromBody] GenreCreationDTO genreDto)
         {
           
@@ -147,6 +161,9 @@ namespace CineMatrix_API.Controllers
 
         // DELETE: api/genres/{id}
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete a genre",
+                   Description = "Deletes a genre based on the provided ID.")]
+
         public async Task<ActionResult> Delete(int id)
         {
           

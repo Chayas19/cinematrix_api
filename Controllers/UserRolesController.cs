@@ -20,7 +20,7 @@ namespace CineMatrix_API.Controllers
         [HttpPost("assign-role")]
         public async Task<IActionResult> AssignRole([FromBody] UserRolesDTO userRolesDto)
         {
-            if (userRolesDto == null || string.IsNullOrWhiteSpace(userRolesDto.RoleName))
+            if (userRolesDto == null || string.IsNullOrWhiteSpace(userRolesDto.RoleName)|| userRolesDto.RoleName == "string")
             {
                 return BadRequest("Invalid role assignment data.");
             }
