@@ -2,6 +2,7 @@
 using CineMatrix_API.DTOs;
 using CineMatrix_API.Helpers;
 using CineMatrix_API.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -69,6 +70,7 @@ namespace CineMatrix_API.Controllers
 
                 _context.Movies.Add(movie);
                 await _context.SaveChangesAsync();
+
 
                 if (movieCreationDTO.Actors != null && movieCreationDTO.Actors.Any())
                 {
@@ -257,31 +259,88 @@ namespace CineMatrix_API.Controllers
 
 
 
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateMovie(int id, [FromBody] MovieCreationDTO movieCreationDTO)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest("Invalid data provided.");
+            }
+
+            var movie = await _context.Movies
+                .Include(m => m.MoviesActors)
+                .Include(m => m.MoviesGenres)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (movie == null)
+            {
+                return NotFound("Movie not found.");
+            }
+
+            movie.Title = movieCreationDTO.Title ?? movie.Title;
+            movie.Description = movieCreationDTO.Description ?? movie.Description;
+            movie.Duration = !string.IsNullOrWhiteSpace(movieCreationDTO.Duration)
+                ? TimeSpan.ParseExact(movieCreationDTO.Duration, "hh\\:mm", null)
+                : movie.Duration;
+            movie.Language = movieCreationDTO.Language ?? movie.Language;
+            movie.IsFree = movieCreationDTO.IsFree;
+            movie.Director = movieCreationDTO.Director ?? movie.Director;
+
+            movie.SubscriptionType = movieCreationDTO.SubscriptionType;
 
 
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> UpdateMovie(int id, [FromForm] MovieUpdateDTO movieCreation)
-        //{
-        //    var movie = await _context.Movies.FindAsync(id);
-        //    if (movie == null)
-        //    {
-        //        return NotFound(new { Message = $"movie with specific {id} not found" });
-
-        //    }
-        //    movieCreation.Title = movieCreation.Title ?? movie.Title;
-        //    movieCreation.Description = movieCreation.Description ?? movie.Description;
-        //    movieCreation.Duration = movieCreation.Duration ?? movie.Duration.ToString();
-        //    movieCreation.Director = movieCreation.Director ?? movie.Director;
-        //    movieCreation.Language = movieCreation.Language ?? movie.Language;
-        //    movieCreation.IsFree = movieCreation.IsFree ?? movie.IsFree;
-        //    movieCreation.PosterUrl = movieCreation.PosterUrl ?? movie.PosterUrl;
-        //    // movieCreation.subscriptionType = movieCreation.subscriptionType ?? movie.SubscriptionType;  
+            if (!string.IsNullOrWhiteSpace(movieCreationDTO.PosterUrl))
+            {
+                string sourceFilePath = Path.Combine(_env.WebRootPath, "images", movieCreationDTO.PosterUrl);
+                if (System.IO.File.Exists(sourceFilePath))
+                {
+                    movie.PosterData = await System.IO.File.ReadAllBytesAsync(sourceFilePath);
+                }
+            }
+            else
+            {
+                movie.PosterData = null;
+            }
 
 
 
+            if (movieCreationDTO.Actors != null)
+            {
+                _context.MovieActors.RemoveRange(movie.MoviesActors);
+                foreach (var actorDTO in movieCreationDTO.Actors)
+                {
+                    if (await _context.Actors.AnyAsync(a => a.Id == actorDTO.PersonId))
+                    {
+                        _context.MovieActors.Add(new MovieActors
+                        {
+                            MovieId = movie.Id,
+                            ActorId = actorDTO.PersonId,
+                            Character = actorDTO.Character ?? movie.MoviesActors.FirstOrDefault(ma => ma.ActorId == actorDTO.PersonId)?.Character
+                        });
+                    }
+                }
+            }
 
+            if (movieCreationDTO.GenresIds != null)
+            {
+                _context.MovieGenres.RemoveRange(movie.MoviesGenres);
+                foreach (var genreId in movieCreationDTO.GenresIds)
+                {
+                    if (await _context.Genres.AnyAsync(g => g.Id == genreId))
+                    {
+                        _context.MovieGenres.Add(new MovieGenres
+                        {
+                            MovieId = movie.Id,
+                            GenreId = genreId
+                        });
+                    }
+                }
+            }
 
-        //}
+            await _context.SaveChangesAsync();
+
+            return Ok("Movie updated successfully.");
+        }
 
 
 

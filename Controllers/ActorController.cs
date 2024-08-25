@@ -4,6 +4,7 @@ using CineMatrix_API.DTOs;
 using CineMatrix_API.Filters;
 using CineMatrix_API.Helpers;
 using CineMatrix_API.Models;
+using EnumsNET;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -22,6 +23,7 @@ public class ActorsController : ControllerBase
     {
         _context = context;
         _mapper = mapper;
+        ;   
     }
 
     [HttpGet]
@@ -297,4 +299,8 @@ public class ActorsController : ControllerBase
         var movieDTOs = _mapper.Map<List<MovieDTO>>(movies);
         return Ok(movieDTOs);
     }
+
+
+
+
 }

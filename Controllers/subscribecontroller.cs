@@ -5,6 +5,7 @@ using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -27,6 +28,8 @@ namespace CineMatrix_API.Controllers
         }
 
         [HttpPost("create")]
+        [SwaggerOperation(Summary = "Create a new subscription",
+                  Description = "Creates a new subscription for a user, associates it with their phone number, and sends an OTP for verification. The OTP must be verified to complete the subscription process.")]
         public async Task<IActionResult> CreateSubscription([FromForm] subscribecreationdto subscriptionDto)
         {
             if (subscriptionDto == null || string.IsNullOrEmpty(subscriptionDto.PhoneNumber))
@@ -73,6 +76,8 @@ namespace CineMatrix_API.Controllers
 
 
         [HttpPost("verify")]
+        [SwaggerOperation(Summary = "Verify a subscription",
+                  Description = "Verifies a subscription by checking the provided OTP code. If the OTP is valid and not expired, it updates the subscription status to verified and payment successful.")]
         public async Task<IActionResult> VerifySubscription([FromForm] subscribeverificationdto verificationDto)
         {
             if (verificationDto == null || string.IsNullOrEmpty(verificationDto.Code))
@@ -111,7 +116,7 @@ namespace CineMatrix_API.Controllers
             _context.Subscribes.Update(subscription);
             await _context.SaveChangesAsync();
 
-            return Ok("Subscription verified and payment status updated to successful.");
+            return Ok("Subscription verified and payment status is successfull.");
         }
 
 
