@@ -3,6 +3,7 @@ using CineMatrix_API.DTOs;
 using CineMatrix_API.Helpers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -21,6 +22,10 @@ namespace CineMatrix_API.Controllers
 
 
         [HttpGet("filterByGenres")]
+        [SwaggerOperation(
+            Summary = "Get movies by genre IDs",
+            Description = "Retrieves a list of movies filtered by the specified genre ID. The results are paginated according to the provided pagination parameters. Returns BadRequest if the genre ID is invalid."
+        )]
         public async Task<ActionResult<List<MovieDTO>>> GetMoviesByGenres(
     [FromQuery] int genreIds,
     [FromQuery] PaginationDTO pagination)
@@ -52,6 +57,10 @@ namespace CineMatrix_API.Controllers
         }
 
         [HttpGet("by-genre name")]
+        [SwaggerOperation(
+            Summary = "Get movies by genre names",
+            Description = "Retrieves a list of movies that match the specified genre names. Returns a list of movies filtered according to the provided genre names."
+        )]
         public async Task<ActionResult<List<MovieDTO>>> GetMoviesByGenres([FromQuery] Genrefiltername filterDto)
         {
             var queryable = _context.Movies.AsQueryable();

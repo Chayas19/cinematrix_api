@@ -4,6 +4,7 @@ using CineMatrix_API.DTOs;
 using CineMatrix_API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -19,43 +20,39 @@ public class MoviesByLanguages : ControllerBase
     }
 
     [HttpGet("movies/{languageName}")]
+    [SwaggerOperation(
+        Summary = "Get movies by language name",
+        Description = "Retrieves a list of movies that are available in the specified language. If the language does not exist, returns a BadRequest. If no movies are found for the specified language, returns a NotFound response."
+    )]
     public async Task<ActionResult<List<MovieDTO>>> GetMoviesByLanguageName(string languageName)
     {
-        
-        var language = await _context.Languages
+        var languageId = await _context.Languages
             .Where(l => l.Name.ToLower() == languageName.ToLower())
+            .Select(l => l.Id)
             .FirstOrDefaultAsync();
 
-        if (language == null)
+        if (languageId == 0)
         {
             return BadRequest("The specified language does not exist.");
         }
- 
-      
+
         var movies = await _context.MoviesLanguages
-            .Where(ml => ml.LanguageId == language.Id)
-            .Include(ml => ml.Movie) 
-                .ThenInclude(m => m.MoviesGenres) 
-                    .ThenInclude(mg => mg.Genre)
+            .Where(ml => ml.LanguageId == languageId)
             .Select(ml => ml.Movie)
             .Distinct()
             .ToListAsync();
 
+        if (movies == null || !movies.Any())
+        {
+            return NotFound("No movies found for the specified language.");
+        }
 
         var movieDTOs = _mapper.Map<List<MovieDTO>>(movies);
-
 
         foreach (var movieDto in movieDTOs)
         {
             var movieEntity = movies.FirstOrDefault(m => m.Id == movieDto.Id);
-            if (movieEntity != null)
-            {
-                movieDto.Poster = movieEntity.PosterUrl;
-            }
-            else
-            {
-                movieDto.Poster = null;
-            }
+            movieDto.Poster = movieEntity?.PosterUrl;
         }
 
         return Ok(movieDTOs);
@@ -63,22 +60,4 @@ public class MoviesByLanguages : ControllerBase
 
 
 
-  
-
-    [HttpGet("{movieId}/{languageId}")]
-    public async Task<ActionResult<MovielanguageDTO>> GetById(int movieId, int languageId)
-    {
-        var movieLanguage = await _context.MoviesLanguages
-            .Include(ml => ml.Movie)
-            .Include(ml => ml.Language)
-            .FirstOrDefaultAsync(ml => ml.MovieId == movieId && ml.LanguageId == languageId);
-
-        if (movieLanguage == null)
-        {
-            return NotFound();
-        }
-
-        var movieLanguageDto = _mapper.Map<MovielanguageDTO>(movieLanguage);
-        return Ok(movieLanguageDto);
-    }
 }
