@@ -4,9 +4,9 @@ using FluentValidation.AspNetCore;
 
 namespace CineMatrix_API.Validations
 {
-    public class MoviecreationDTOValidators : AbstractValidator<MovieCreationDTO>
+    public class MoviecreationDTOValidaton : AbstractValidator<MovieCreationDTO>
     {
-        public MoviecreationDTOValidators()
+        public MoviecreationDTOValidaton()
         {
             RuleFor(x => x.Title)
              .NotEmpty().WithMessage("Title is required");

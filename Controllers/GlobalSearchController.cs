@@ -1,6 +1,7 @@
 ﻿using FuzzySharp;  // Fuzzy matching library
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -16,6 +17,9 @@ namespace CineMatrix_API.Controllers
         }
 
         [HttpGet("search")]
+        [SwaggerOperation(Summary = "Perform a global search for movies, actors, genres, and languages",
+                   Description = "Searches for movies, actors, genres, and languages based on a query string. Returns results where the query matches the names of movies, actors, genres, or languages. The results include relevant details such as movie titles, associated genres, actors, and languages.")]
+
         public async Task<IActionResult> Search([FromQuery] string query)
         {
           

@@ -27,7 +27,7 @@ namespace CineMatrix_API.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> CreateSubscription([FromBody] subscribecreationdto subscriptionDto)
+        public async Task<IActionResult> CreateSubscription([FromForm] subscribecreationdto subscriptionDto)
         {
             if (subscriptionDto == null || string.IsNullOrEmpty(subscriptionDto.PhoneNumber))
             {
@@ -73,7 +73,7 @@ namespace CineMatrix_API.Controllers
 
 
         [HttpPost("verify")]
-        public async Task<IActionResult> VerifySubscription([FromBody] subscribeverificationdto verificationDto)
+        public async Task<IActionResult> VerifySubscription([FromForm] subscribeverificationdto verificationDto)
         {
             if (verificationDto == null || string.IsNullOrEmpty(verificationDto.Code))
             {

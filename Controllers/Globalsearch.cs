@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -15,6 +16,9 @@ namespace CineMatrix_API.Controllers
         }
 
         [HttpGet("suggestions")]
+        [SwaggerOperation(Summary = "Get search suggestions",
+                   Description = "Returns a list of suggestions based on the beginning letters you provide. You can search for movies, actors, languages, or genres.")]
+
         public async Task<IActionResult> GetSuggestions([FromQuery] string letter, [FromQuery] string type)
         {
             if (string.IsNullOrEmpty(letter) || string.IsNullOrEmpty(type))
