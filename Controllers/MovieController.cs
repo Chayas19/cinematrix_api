@@ -111,15 +111,14 @@ namespace CineMatrix_API.Controllers
             }
             catch (Exception ex)
             {
-                
 
                 return StatusCode(StatusCodes.Status500InternalServerError, new { success = false, message = "An error occurred while creating the movie. Please try again later." });
             }
         }
 
+
         // GET: api/movie
         [HttpGet]
-
         public async Task<IActionResult> Get([FromQuery] PaginationDTO pagination)
         {
             try
@@ -184,7 +183,6 @@ namespace CineMatrix_API.Controllers
 
         [HttpGet("{id}")]
         // GET: api/movie/{id}
-
         public async Task<IActionResult> GetMovieImage(int id)
         {
             try
@@ -238,11 +236,11 @@ namespace CineMatrix_API.Controllers
                     return NotFound(new { success = false, message = "Movie not found." });
                 }
 
-              
+
                 var movieActors = _context.MovieActors.Where(ma => ma.MovieId == id);
                 _context.MovieActors.RemoveRange(movieActors);
 
-              
+
                 var movieGenres = _context.MovieGenres.Where(mg => mg.MovieId == id);
                 _context.MovieGenres.RemoveRange(movieGenres);
 
@@ -256,6 +254,36 @@ namespace CineMatrix_API.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, new { success = false, message = "An error occurred while deleting the movie. Please try again later." });
             }
         }
+
+
+
+
+
+        //[HttpPut("{id}")]
+        //public async Task<IActionResult> UpdateMovie(int id, [FromForm] MovieUpdateDTO movieCreation)
+        //{
+        //    var movie = await _context.Movies.FindAsync(id);
+        //    if (movie == null)
+        //    {
+        //        return NotFound(new { Message = $"movie with specific {id} not found" });
+
+        //    }
+        //    movieCreation.Title = movieCreation.Title ?? movie.Title;
+        //    movieCreation.Description = movieCreation.Description ?? movie.Description;
+        //    movieCreation.Duration = movieCreation.Duration ?? movie.Duration.ToString();
+        //    movieCreation.Director = movieCreation.Director ?? movie.Director;
+        //    movieCreation.Language = movieCreation.Language ?? movie.Language;
+        //    movieCreation.IsFree = movieCreation.IsFree ?? movie.IsFree;
+        //    movieCreation.PosterUrl = movieCreation.PosterUrl ?? movie.PosterUrl;
+        //    // movieCreation.subscriptionType = movieCreation.subscriptionType ?? movie.SubscriptionType;  
+
+
+
+
+
+        //}
+
+
 
 
     }
