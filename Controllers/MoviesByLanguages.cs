@@ -18,48 +18,6 @@ public class MoviesByLanguages : ControllerBase
         _mapper = mapper;
     }
 
-    [HttpPost("addMovie")]
-    public async Task<ActionResult> AddMovie([FromBody] MovieCreationDTO movieDto, [FromQuery] string languageName)
-    {
-        if (movieDto == null)
-        {
-            return BadRequest("MovieCreationDTO is null.");
-        }
-
-      
-        var language = await _context.Languages
-            .FirstOrDefaultAsync(l => l.Name.Equals(languageName, StringComparison.OrdinalIgnoreCase));
-        if (language == null)
-        {
-            return BadRequest("The specified language does not exist.");
-        }
-
-   
-        var movie = new Movie
-        {
-            Title = movieDto.Title
-        };
-
-        _context.Movies.Add(movie);
-        await _context.SaveChangesAsync();
-
-   
-        var movieLanguage = new MovieLanguage
-        {
-            MovieId = movie.Id,
-            LanguageId = language.Id
-        };
-
-        _context.MoviesLanguages.Add(movieLanguage);
-        await _context.SaveChangesAsync();
-
-        return CreatedAtAction(nameof(GetById), new
-        {
-            movieId = movie.Id,
-            languageId = language.Id
-        }, movie);
-    }
-
     [HttpGet("movies/{languageName}")]
     public async Task<ActionResult<List<MovieDTO>>> GetMoviesByLanguageName(string languageName)
     {

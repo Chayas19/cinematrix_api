@@ -39,6 +39,8 @@ namespace CineMatrix_API.Controllers
 
             try
             {
+               
+
                 byte[] posterData = null;
                 if (!string.IsNullOrWhiteSpace(movieCreationDTO.PosterUrl))
                 {
@@ -54,6 +56,14 @@ namespace CineMatrix_API.Controllers
                         return BadRequest(new { success = false, message = "The specified poster file does not exist." });
                     }
                 }
+                var movieExists = await _context.Movies
+           .AnyAsync(m => EF.Functions.Like(m.Title, movieCreationDTO.Title));
+
+                if (movieExists)
+                {
+                    return BadRequest(new { success = false, message = "A movie with the same title already exists." });
+                }
+
 
                 var movie = new Movie
                 {
@@ -70,6 +80,32 @@ namespace CineMatrix_API.Controllers
 
                 _context.Movies.Add(movie);
                 await _context.SaveChangesAsync();
+
+                if (!string.IsNullOrEmpty(movieCreationDTO.Language))
+                {
+                    var language = await _context.Languages
+                        .Where(l => l.Name.ToLower() == movieCreationDTO.Language.ToLower())
+                        .FirstOrDefaultAsync();
+
+                    if (language == null)
+                    {
+                        return BadRequest(new { success = false, message = "The specified language does not exist." });
+                    }
+
+                    var movieLanguage = new MovieLanguage
+                    {
+                        MovieId = movie.Id,
+                        LanguageId = language.Id
+                    };
+
+                    _context.MoviesLanguages.Add(movieLanguage);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    return BadRequest(new { success = false, message = "Language name is required." });
+                }
+
 
 
                 if (movieCreationDTO.Actors != null && movieCreationDTO.Actors.Any())
