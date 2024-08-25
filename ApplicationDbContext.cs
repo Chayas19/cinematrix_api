@@ -97,6 +97,13 @@ namespace CineMatrix_API
                 .HasForeignKey(p => p.UserId);
 
 
+            modelBuilder.Entity<Reviews>()  
+              .HasOne(s => s.Movie) 
+              .WithMany(u => u.Reviews) 
+              .HasForeignKey(s => s.MovieId)
+              .OnDelete(DeleteBehavior.Cascade);    
+
+
             modelBuilder.Entity<Reviews>()
                 .HasOne(r => r.User)
                 .WithMany(u => u.Reviews)

@@ -24,8 +24,6 @@ namespace CineMatrix_API.Models
         public List<MovieActors> MoviesActors { get; set; }
         public List<MovieGenres> MoviesGenres { get; set; }
         public List<MovieLanguage> MovieLanguages { get; set; }
-
-  
         public ICollection<Reviews> Reviews { get; set; }
         public ICollection<WatchHistory> WatchHistories { get; set; }
      
