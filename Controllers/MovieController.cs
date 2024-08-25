@@ -5,6 +5,7 @@ using CineMatrix_API.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Swashbuckle.AspNetCore.Annotations;
 
 namespace CineMatrix_API.Controllers
 {
@@ -25,6 +26,7 @@ namespace CineMatrix_API.Controllers
 
         // POST: api/movie
         [HttpPost]
+        [SwaggerOperation(Summary = "Create a new movie", Description = "Creates a new movie with the provided details.")]
         public async Task<IActionResult> CreateMovie([FromBody] MovieCreationDTO movieCreationDTO)
         {
             if (!ModelState.IsValid)
@@ -39,7 +41,7 @@ namespace CineMatrix_API.Controllers
 
             try
             {
-               
+
 
                 byte[] posterData = null;
                 if (!string.IsNullOrWhiteSpace(movieCreationDTO.PosterUrl))
@@ -157,6 +159,7 @@ namespace CineMatrix_API.Controllers
 
         // GET: api/movie
         [HttpGet]
+        [SwaggerOperation(Summary = "Get a list of movies", Description = "Retrieves a paginated list of movies.")]
         public async Task<IActionResult> Get([FromQuery] PaginationDTO pagination)
         {
             try
@@ -174,7 +177,7 @@ namespace CineMatrix_API.Controllers
                     return NotFound(new { success = false, message = "No movies found." });
                 }
 
-               
+
                 var movieDTOs = _mapper.Map<List<MovieDTO>>(movies);
 
                 var baseUrl = $"{Request.Scheme}://{Request.Host}/images/";
@@ -185,16 +188,16 @@ namespace CineMatrix_API.Controllers
                     {
                         try
                         {
-                           
+
                             var base64String = Convert.ToBase64String(movieDTO.PosterData);
 
-                       
+
                             movieDTO.ImageUrl = $"data:image/jpeg;base64,{base64String}";
                         }
                         catch (Exception ex)
                         {
-                            
-                            
+
+
                             movieDTO.ImageUrl = $"{baseUrl}default.jpg";
                         }
                     }
@@ -204,7 +207,7 @@ namespace CineMatrix_API.Controllers
                     }
                     else
                     {
-                        movieDTO.ImageUrl = $"{baseUrl}default.jpg"; // Ensure this image exists
+                        movieDTO.ImageUrl = $"{baseUrl}default.jpg"; 
                     }
                 }
 
@@ -212,7 +215,7 @@ namespace CineMatrix_API.Controllers
             }
             catch (Exception ex)
             {
-             
+
                 return StatusCode(StatusCodes.Status500InternalServerError, new { success = false, message = "An error occurred while fetching movies. Please try again later." });
             }
         }
@@ -221,11 +224,12 @@ namespace CineMatrix_API.Controllers
 
         [HttpGet("{id}")]
         // GET: api/movie/{id}
+        [SwaggerOperation(Summary = "Get movie details with specified Id", Description = "Retrieves the details of a specific movie including its image with specific Id.")]
         public async Task<IActionResult> GetMovieImage(int id)
         {
             try
             {
-               
+
                 var movie = await _context.Movies.FindAsync(id);
 
                 if (movie == null)
@@ -233,7 +237,7 @@ namespace CineMatrix_API.Controllers
                     return NotFound(new { success = false, message = "Movie not found." });
                 }
 
-             
+
                 var movieDetails = new
                 {
                     Id = movie.Id,
@@ -254,7 +258,7 @@ namespace CineMatrix_API.Controllers
             }
             catch (Exception ex)
             {
-                
+
 
                 return StatusCode(StatusCodes.Status500InternalServerError, new { success = false, message = "An error occurred while fetching the movie details. Please try again later." });
             }
@@ -263,6 +267,7 @@ namespace CineMatrix_API.Controllers
 
 
         [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Delete a movie", Description = "Deletes a specific movie by its ID.")]
         public async Task<IActionResult> DeleteMovie(int id)
         {
             try
@@ -296,11 +301,17 @@ namespace CineMatrix_API.Controllers
 
 
         [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Update a movie", Description = "Updates the details of a specific movie.")]
         public async Task<IActionResult> UpdateMovie(int id, [FromBody] MovieCreationDTO movieCreationDTO)
         {
             if (!ModelState.IsValid)
             {
-                return BadRequest("Invalid data provided.");
+                return BadRequest(new
+                {
+                    success = false,
+                    message = "Invalid data provided.",
+                    errors = ModelState.Values.SelectMany(v => v.Errors.Select(e => e.ErrorMessage))
+                });
             }
 
             var movie = await _context.Movies
@@ -310,7 +321,7 @@ namespace CineMatrix_API.Controllers
 
             if (movie == null)
             {
-                return NotFound("Movie not found.");
+                return NotFound(new { success = false, message = "Movie not found." });
             }
 
             movie.Title = movieCreationDTO.Title ?? movie.Title;
@@ -321,16 +332,21 @@ namespace CineMatrix_API.Controllers
             movie.Language = movieCreationDTO.Language ?? movie.Language;
             movie.IsFree = movieCreationDTO.IsFree;
             movie.Director = movieCreationDTO.Director ?? movie.Director;
-
             movie.SubscriptionType = movieCreationDTO.SubscriptionType;
-
 
             if (!string.IsNullOrWhiteSpace(movieCreationDTO.PosterUrl))
             {
-                string sourceFilePath = Path.Combine(_env.WebRootPath, "images", movieCreationDTO.PosterUrl);
+                string imageDirectory = Path.Combine(_env.WebRootPath, "images");
+                string sourceFilePath = Path.Combine(imageDirectory, movieCreationDTO.PosterUrl);
+
                 if (System.IO.File.Exists(sourceFilePath))
                 {
                     movie.PosterData = await System.IO.File.ReadAllBytesAsync(sourceFilePath);
+                    movie.PosterUrl = movieCreationDTO.PosterUrl;
+                }
+                else
+                {
+                    return BadRequest(new { success = false, message = "The specified poster file does not exist." });
                 }
             }
             else
@@ -338,7 +354,38 @@ namespace CineMatrix_API.Controllers
                 movie.PosterData = null;
             }
 
+            if (!string.IsNullOrEmpty(movieCreationDTO.Language))
+            {
+                var language = await _context.Languages
+                    .Where(l => l.Name.ToLower() == movieCreationDTO.Language.ToLower())
+                    .FirstOrDefaultAsync();
 
+                if (language == null)
+                {
+                    return BadRequest(new { success = false, message = "The specified language does not exist." });
+                }
+
+                var movieLanguage = await _context.MoviesLanguages
+                    .FirstOrDefaultAsync(ml => ml.MovieId == movie.Id);
+
+                if (movieLanguage != null)
+                {
+                    _context.MoviesLanguages.Remove(movieLanguage);
+                    await _context.SaveChangesAsync();
+                }
+
+                var newMovieLanguage = new MovieLanguage
+                {
+                    MovieId = movie.Id,
+                    LanguageId = language.Id
+                };
+
+                _context.MoviesLanguages.Add(newMovieLanguage);
+            }
+            else
+            {
+                return BadRequest(new { success = false, message = "Language name is required." });
+            }
 
             if (movieCreationDTO.Actors != null)
             {
@@ -353,6 +400,10 @@ namespace CineMatrix_API.Controllers
                             ActorId = actorDTO.PersonId,
                             Character = actorDTO.Character ?? movie.MoviesActors.FirstOrDefault(ma => ma.ActorId == actorDTO.PersonId)?.Character
                         });
+                    }
+                    else
+                    {
+                        return BadRequest(new { success = false, message = $"Actor with ID {actorDTO.PersonId} does not exist." });
                     }
                 }
             }
@@ -370,16 +421,23 @@ namespace CineMatrix_API.Controllers
                             GenreId = genreId
                         });
                     }
+                    else
+                    {
+                        return BadRequest(new { success = false, message = $"Genre with ID {genreId} does not exist." });
+                    }
                 }
             }
 
-            await _context.SaveChangesAsync();
-
-            return Ok("Movie updated successfully.");
+            try
+            {
+                await _context.SaveChangesAsync();
+                return Ok(new { success = true, message = "Movie updated successfully." });
+            }
+            catch (Exception)
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { success = false, message = "An error occurred while updating the movie. Please try again later." });
+            }
         }
-
-
-
 
     }
 

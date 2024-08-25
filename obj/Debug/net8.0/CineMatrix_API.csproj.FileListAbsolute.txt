@@ -1,11 +1,3 @@
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.csproj.AssemblyReference.cache
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.GeneratedMSBuildEditorConfig.editorconfig
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.AssemblyInfoInputs.cache
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.AssemblyInfo.cs
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.csproj.CoreCompileInputs.cache
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.MvcApplicationPartsAssemblyInfo.cs
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.MvcApplicationPartsAssemblyInfo.cache
-D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.sourcelink.json
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\appsettings.Development.json
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\appsettings.json
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\CineMatrix_API.staticwebassets.runtime.json
@@ -186,6 +178,14 @@ D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\cinematrix-app\cinematrix_api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.csproj.AssemblyReference.cache
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.GeneratedMSBuildEditorConfig.editorconfig
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.AssemblyInfoInputs.cache
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.AssemblyInfo.cs
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.csproj.CoreCompileInputs.cache
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.MvcApplicationPartsAssemblyInfo.cs
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.MvcApplicationPartsAssemblyInfo.cache
+D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\CineMatrix_API.sourcelink.json
 D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\staticwebassets.build.json
 D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\staticwebassets.development.json
 D:\cinematrix-app\cinematrix_api\obj\Debug\net8.0\staticwebassets\msbuild.CineMatrix_API.Microsoft.AspNetCore.StaticWebAssets.props
