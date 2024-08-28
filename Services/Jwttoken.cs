@@ -3,9 +3,10 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using CineMatrix_API.Models;
+using CineMatrix_API.Repository;
 using Microsoft.IdentityModel.Tokens;
 
-public class JwtService
+public class JwtService : Ijwtservice
 {
     private readonly string _secretKey;
     private readonly string _issuer;

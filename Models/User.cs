@@ -26,6 +26,6 @@
 
         public ICollection<Subscribe> Subscribes { get; set; }
 
-
+  
     }
 }

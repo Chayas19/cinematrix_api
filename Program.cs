@@ -5,6 +5,7 @@ using CineMatrix_API.Filters;
 using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
 using CineMatrix_API.Validations;
+using FluentAssertions.Common;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
@@ -35,6 +36,7 @@ builder.Services.AddScoped<OtpService>();
 builder.Services.AddScoped<Passwordservice>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISMSService, Smsservice>();
+builder.Services.AddScoped<IOtpService, OtpService>();
 
 
 builder.Services.AddAutoMapper(typeof(Program));

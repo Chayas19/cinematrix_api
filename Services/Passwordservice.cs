@@ -1,6 +1,8 @@
-﻿namespace CineMatrix_API.Services
+﻿using CineMatrix_API.Repository;
+
+namespace CineMatrix_API.Services
 {
-    public class Passwordservice
+    public class Passwordservice : IPasswordService
     {
 
       

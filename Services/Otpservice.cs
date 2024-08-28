@@ -1,10 +1,11 @@
 ﻿using CineMatrix_API.Enums;
 using CineMatrix_API.Models;
+using CineMatrix_API.Repository;
 using Microsoft.EntityFrameworkCore;
 
 namespace CineMatrix_API.Services
 {
-    public class OtpService
+    public class OtpService : IOtpService
     {
         private readonly ApplicationDbContext _context;
 

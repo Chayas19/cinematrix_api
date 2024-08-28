@@ -21,27 +21,27 @@ namespace CineMatrix_API.Controllers
     {
         private readonly ApplicationDbContext _context;
         private readonly IMapper _mapper;
-        private readonly OtpService _otpService;
         private readonly ISMSService _smsService;
         private readonly IEmailService _emailSender;
-        private readonly Passwordservice _passwordService;
-        private readonly JwtService _jwtService;
+        private readonly IPasswordService _passwordService;
+        private readonly Ijwtservice _jwtService;
+        private readonly IOtpService _otpService;
         private readonly IValidator<UsercreationDTO> _validator;
 
         public UserAccountController(
             IMapper mapper,
             ApplicationDbContext context,
-            OtpService otpService,
+            IOtpService otpservice,
             ISMSService smsService,
             IEmailService emailSender,
-            Passwordservice passwordService,
-            JwtService jwtService,
+            IPasswordService passwordService,
+            Ijwtservice jwtService,
             IValidator<UsercreationDTO> validator
             )
         {
             _mapper = mapper;
             _context = context;
-            _otpService = otpService;
+            _otpService = otpservice;   
             _smsService = smsService;
             _emailSender = emailSender;
             _passwordService = passwordService;
@@ -59,11 +59,15 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("User registration data is not valid.");
             }
 
-            if (string.IsNullOrEmpty(userCreationDto.Email))
+            if (string.IsNullOrEmpty(userCreationDto.Email) ||
+                string.IsNullOrEmpty(userCreationDto.Password)||
+                string.IsNullOrEmpty(userCreationDto.ConfirmPassword)||
+                string.IsNullOrEmpty(userCreationDto.Name)||
+                string.IsNullOrEmpty(userCreationDto.PhoneNumber.ToString()))
             {
-                return BadRequest("Email field cannot be empty. Please provide an email address.");
+                return BadRequest("Fields cannot be empty, Please provide the valid input data");
             }
-
+            
             if (string.IsNullOrEmpty(userCreationDto.Password) || userCreationDto.Password != userCreationDto.ConfirmPassword)
             {
                 return BadRequest("Password fields cannot be empty and must match.");

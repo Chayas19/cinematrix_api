@@ -237,7 +237,7 @@ public class ActorsController : ControllerBase
             await file.CopyToAsync(fileStream);
         }
 
-        // Return the relative path
+ 
         return Path.Combine("images", uniqueFileName).Replace("\\", "/");
     }
 
