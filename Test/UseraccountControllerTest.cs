@@ -10,6 +10,7 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Identity.Client;
 using Moq;
 using SQLitePCL;
 using Twilio.Rest.Serverless.V1.Service;
@@ -205,7 +206,64 @@ public class UserAccountControllerTests
         Assert.Equal("Invalid input data", actionResult.Value);
 
     }
-   
+
+    [Fact]
+    
+    public async Task Register_duplicatephonenumber_ReturnsBadRequest()
+    {
+        var userdto = new UsercreationDTO()
+        {
+            Name = "JohnDoe",
+            Email = "JohnDoe@example.com",
+            PhoneNumber = 1234567890,
+            Password = "JohnDoe@123",
+            ConfirmPassword = "JohnDoe@123",
+        };
+        var existingUser = new User
+        {
+            Name = "Existing User",
+            Email = "existing@example.com",
+            Password = "existingPassword",
+            PhoneNumber = 1234567890,
+            IsEmailVerified = true,
+            Verificationstatus = "true",
+            IsPhonenumberVerified = true,
+
+        };
+
+        _context.Users.Add(existingUser);
+        await _context.SaveChangesAsync();
+
+
+        _mockValidator.Setup(v => v.Validate(It.IsAny<UsercreationDTO>()))
+             .Returns(new FluentValidation.Results.ValidationResult());
+
+        var result = await _controller.Register(userdto);
+        var actionResult =Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal(400, actionResult.StatusCode);
+
+    }
+
+    [Fact]
+    public async Task Register_InternalServerError_ReturnsBadRequest()
+    {
+        var userdto = new UsercreationDTO()
+        {
+            Name = "JohnDoe",
+            Email = "JohnDoe@example.com",
+            PhoneNumber = 1234567890,
+            Password = "JohnDoe@123",
+            ConfirmPassword = "JohnDoe@123"
+        };
+
+        _mockValidator.Setup(v => v.Validate(It.IsAny<UsercreationDTO>()))
+        .Returns(new FluentValidation.Results.ValidationResult());
+
+        var result = await _controller.Register(userdto);
+        var actionResult = Assert.IsType<ObjectResult>(result);
+        Assert.Equal(500,actionResult.StatusCode);
+
+    }
 }
 
 
