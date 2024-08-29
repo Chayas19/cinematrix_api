@@ -1,29 +1,45 @@
+using System;
 using System.Globalization;
 using System.Text;
 using CineMatrix_API;
+using CineMatrix_API.DTOs;
 using CineMatrix_API.Filters;
 using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
 using CineMatrix_API.Validations;
 using FluentAssertions.Common;
 using FluentValidation.AspNetCore;
+using FluentValidation.Validators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
+using Twilio.Rest.Serverless.V1.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PaginationDTOValidator>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<ReviewDTOValidation>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<UserRolesDTOValidation>());
-builder.Services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<SubscribeDTOValidation>());
+builder.Services.AddFluentValidation(fv =>
+{
+    fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<LoginDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<PaginationDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<ReviewDTOValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<UserRolesDTOValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<SubscribeDTOValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<ActorCreationValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<ActorUpdateDTOValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<GenreCreationDTO>();
+    fv.RegisterValidatorsFromAssemblyContaining<ForgotPasswordDTO>();
+    fv.RegisterValidatorsFromAssemblyContaining<LanguageCreationDTO>();
+    fv.RegisterValidatorsFromAssemblyContaining<MovieControllerValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<SendOTPValidation>();
+    fv.RegisterValidatorsFromAssemblyContaining<MoviecreationDTOValidaton>();
+    fv.RegisterValidatorsFromAssemblyContaining<UserCreationDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<VerifyEmailDTOValidator>();
+    fv.RegisterValidatorsFromAssemblyContaining<ResendOtpDTOValidator>();
+});
 
 
 
@@ -37,7 +53,8 @@ builder.Services.AddScoped<IPasswordService, Passwordservice>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISMSService, Smsservice>();
 builder.Services.AddScoped<IOtpService, OtpService>();
-builder.Services.AddScoped<Ijwtservice, JwtService>();  
+builder.Services.AddScoped<IUserService, UserService>();
+
 
 
 builder.Services.AddAutoMapper(typeof(Program));
@@ -68,11 +85,10 @@ builder.Services.AddAuthorization(options =>
 });
 
 
-builder.Services.AddScoped<JwtService>(provider =>
+builder.Services.AddScoped<Ijwtservice>(provider =>
 {
     return new JwtService(key, issuer, audience, accessTokenExpirationMinutes);
 });
-
 
 builder.Services.AddAuthentication(options =>
 {
