@@ -403,8 +403,48 @@ public class UserAccountControllerTests
         Assert.Equal("New OTP sent to your email.", actionResult.Value);
 
     }
+    [Fact]
+    public async Task ReSendEmailOtp_UserNotExists_ReturnsBadRequest()
+    {
+        var emaildto = new ResendOtpDTO
+        {
+            UserId = 1, 
+            email = "JohnDoe12@example.com"
+        };
 
-   
+        _context.Users.RemoveRange(_context.Users);
+        await _context.SaveChangesAsync();
+
+        _mockResendOtpValidator.Setup(v => v.Validate(It.IsAny<ResendOtpDTO>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+        var result = await _controller.ResendEmailOtp(emaildto);
+        var actionResult = Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal(400, actionResult.StatusCode);
+        Assert.Equal("Invalid user.", actionResult.Value);
+    }
+
+    [Fact]
+    public async Task ReSendEmailOtp_InternalServerError_ReturnsBadRequest()
+    {
+        var email = new ResendOtpDTO
+        {
+            UserId = 1,
+            email = "JohnDoe@example.com"
+        };
+        _mockResendOtpValidator.Setup(v => v.Validate(It.IsAny<ResendOtpDTO>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+
+
+        _mockEmailService.Setup(s => s.SendOtpEmailAsync(It.IsAny<string>(), It.IsAny<string>()))
+     .ThrowsAsync(new Exception("Internal server error"));
+
+
+        var result = await _controller.ResendEmailOtp(email);
+        var actionResult = Assert.IsType<ObjectResult>(result); Assert.Equal(500, actionResult.StatusCode);
+        Assert.Equal("Internal server error", actionResult.Value);
+
+    }
+
 }
 
 
