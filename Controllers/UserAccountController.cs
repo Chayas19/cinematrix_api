@@ -27,28 +27,31 @@ namespace CineMatrix_API.Controllers
         private readonly Ijwtservice _jwtService;
         private readonly IOtpService _otpService;
         private readonly IValidator<UsercreationDTO> _validator;
+        private readonly IValidator<EmailVerificationdto> _emailValidator;
+        private readonly IValidator<ResendOtpDTO> _resendOtpValidator;  
 
         public UserAccountController(
             IMapper mapper,
             ApplicationDbContext context,
-            IOtpService otpservice,
+            IOtpService otpService,
             ISMSService smsService,
             IEmailService emailSender,
             IPasswordService passwordService,
             Ijwtservice jwtService,
-            IValidator<UsercreationDTO> validator
-            )
+            IValidator<UsercreationDTO> validator,
+            IValidator<EmailVerificationdto> emailValidator,
+            IValidator<ResendOtpDTO> resendOtpValidator)
         {
             _mapper = mapper;
             _context = context;
-            _otpService = otpservice;   
+            _otpService = otpService;
             _smsService = smsService;
             _emailSender = emailSender;
             _passwordService = passwordService;
             _jwtService = jwtService;
             _validator = validator;
-
-
+            _emailValidator = emailValidator;
+            _resendOtpValidator = resendOtpValidator;
         }
 
         [HttpPost("register")]
@@ -63,7 +66,7 @@ namespace CineMatrix_API.Controllers
                 string.IsNullOrEmpty(userCreationDto.Password)||
                 string.IsNullOrEmpty(userCreationDto.ConfirmPassword)||
                 string.IsNullOrEmpty(userCreationDto.Name)||
-                string.IsNullOrEmpty(userCreationDto.PhoneNumber.ToString()))
+                 userCreationDto.PhoneNumber <= 0)
             {
                 return BadRequest("Fields cannot be empty, Please provide the valid input data");
             }
@@ -76,7 +79,7 @@ namespace CineMatrix_API.Controllers
             if (userCreationDto.Email == "string" ||
              userCreationDto.Password == "string" ||
             userCreationDto.ConfirmPassword == "string" ||
-            userCreationDto.PhoneNumber < 0 ||
+            userCreationDto.PhoneNumber == 0 ||
             userCreationDto.Name == "string")
             {
                 return BadRequest("Invalid input data");
@@ -124,14 +127,13 @@ namespace CineMatrix_API.Controllers
 
                 await transaction.CommitAsync();
 
-                return Ok("User account is created successfully. Please verify your email " +
-                    " complete registration successfully.");
+                return Ok("User account is created successfully. Please verify your email to complete registration");
             }
             catch (Exception ex)
             {
 
                 await transaction.RollbackAsync();
-                return StatusCode(500, $"Internal server error: {ex.Message}");
+                return StatusCode(500, $"Internal server error.");
 
             }
         }
@@ -204,12 +206,21 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Email is already verified.");
             }
 
-            var newOtpCode = await _otpService.GenerateOTP();
-            await _otpService.SaveOtpAsync(user.Id, newOtpCode, OTPType.EmailVerfication);
+            try
+            {
 
-            await _emailSender.SendOtpEmailAsync(user.Email, newOtpCode);
+                var newOtpCode = await _otpService.GenerateOTP();
+                await _otpService.SaveOtpAsync(user.Id, newOtpCode, OTPType.EmailVerfication);
 
-            return Ok("New OTP sent to your email.");
+                await _emailSender.SendOtpEmailAsync(user.Email, newOtpCode);
+
+                return Ok("New OTP sent to your email.");
+            }
+            catch (Exception ex)
+            {
+
+                return StatusCode(500, $"{ex.Message}");
+            }
         }
 
 
@@ -227,7 +238,7 @@ namespace CineMatrix_API.Controllers
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == emailVerificationRequestDto.Email);
             if (user == null)
             {
-                return BadRequest("User not found.");
+                return BadRequest("User does not exists");
             }
 
             if (user.IsEmailVerified)
@@ -235,15 +246,21 @@ namespace CineMatrix_API.Controllers
                 return BadRequest("Email is already verified.");
             }
 
+            try
+            {
+                var emailOtpCode = await _otpService.GenerateOTP();
 
-            var emailOtpCode = await _otpService.GenerateOTP();
-
-            await _otpService.SaveOtpAsync(user.Id, emailOtpCode, OTPType.EmailVerfication);
+                await _otpService.SaveOtpAsync(user.Id, emailOtpCode, OTPType.EmailVerfication);
 
 
-            await _emailSender.SendOtpEmailAsync(user.Email, emailOtpCode);
+                await _emailSender.SendOtpEmailAsync(user.Email, emailOtpCode);
 
-            return Ok("OTP sent to email. Please verify your email.");
+                return Ok("OTP sent to email. Please verify your email.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"{ ex.Message}");
+            }
         }
 
         [HttpPost("login")]

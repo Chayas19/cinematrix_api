@@ -3,6 +3,7 @@ using AutoMapper;
 using CineMatrix_API;
 using CineMatrix_API.Controllers;
 using CineMatrix_API.DTOs;
+using CineMatrix_API.Enums;
 using CineMatrix_API.Models;
 using CineMatrix_API.Repository;
 using CineMatrix_API.Services;
@@ -10,7 +11,6 @@ using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
-using Microsoft.Identity.Client;
 using Moq;
 using SQLitePCL;
 using Twilio.Rest.Serverless.V1.Service;
@@ -29,6 +29,8 @@ public class UserAccountControllerTests
     private readonly Mock<IPasswordService> _mockPasswordService;
     private readonly Mock<Ijwtservice> _mockJwtService;
     private readonly Mock<IValidator<UsercreationDTO>> _mockValidator;
+    private readonly Mock<IValidator<EmailVerificationdto>> _mockemailValidator;
+    private readonly Mock<IValidator<ResendOtpDTO>> _mockResendOtpValidator;  
 
     public UserAccountControllerTests()
     {
@@ -45,6 +47,8 @@ public class UserAccountControllerTests
         _mockPasswordService = new Mock<IPasswordService>();
         _mockJwtService = new Mock<Ijwtservice>();
         _mockValidator = new Mock<IValidator<UsercreationDTO>>();
+        _mockemailValidator = new Mock<IValidator<EmailVerificationdto>>();
+        _mockResendOtpValidator = new Mock<IValidator<ResendOtpDTO>>(); 
 
         _controller = new UserAccountController(
             _mapper,
@@ -54,7 +58,10 @@ public class UserAccountControllerTests
             _mockEmailService.Object,
             _mockPasswordService.Object,
             _mockJwtService.Object,
-            _mockValidator.Object
+            _mockValidator.Object,
+            _mockemailValidator.Object,
+            _mockResendOtpValidator.Object
+           
         );
     }
 
@@ -76,12 +83,17 @@ public class UserAccountControllerTests
         _mockPasswordService.Setup(s => s.HashPassword(It.IsAny<string>()))
                             .Returns("hashedPassword");
 
-        var result = await _controller.Register(userdto);
+        _context.Users.RemoveRange(_context.Users);
+        await _context.SaveChangesAsync();
 
+        var result = await _controller.Register(userdto);
         var actionResult = Assert.IsType<OkObjectResult>(result);
         Assert.Equal(200, actionResult.StatusCode);
-        Assert.Equal("User account is created successfully. Please verify your email  complete registration successfully.", actionResult.Value);
+        Assert.Equal("User account is created successfully. Please verify your email to complete registration", actionResult.Value);
+
+
     }
+
 
     [Fact]
     public async Task Register_WithExistingEmail_ReturnsBadRequest()
@@ -102,7 +114,7 @@ public class UserAccountControllerTests
             Password = "existingPassword",
             PhoneNumber = 1234567890,
             IsEmailVerified = true,
-            Verificationstatus = "true",
+            Verificationstatus = "false",
             IsPhonenumberVerified = true,
 
         };
@@ -144,7 +156,7 @@ public class UserAccountControllerTests
     }
 
     [Fact]
-    public async Task Register_WithPasswordmismatch_ReturnsBadRequest()
+    public async Task Register_WithPasswordMismatch_ReturnsBadRequest()
     {
         var userdto = new UsercreationDTO
         {
@@ -164,7 +176,7 @@ public class UserAccountControllerTests
     }
 
     [Fact]
-    public async Task ReturnsEmptyfieldsdata_ReturnsBadRequest()
+    public async Task ReturnsEmptyFieldsData_ReturnsBadRequest()
     {
         var userdto = new UsercreationDTO
         {
@@ -186,30 +198,30 @@ public class UserAccountControllerTests
     }
 
     [Fact]
-    public async Task Returns_stringinputdataformat_ReturnsBadRequest()
+    public async Task Returns_stringInputDataFormat_ReturnsBadRequest()
     {
-        var userdto = new UsercreationDTO()
+        var userdto = new UsercreationDTO
         {
-           Name = "string",
-           Email = "string",
-           Password = "string", 
-           ConfirmPassword= "string",   
-           PhoneNumber = 0
-
+            Name = "string",
+            Email = "string",
+            Password = "string",
+            ConfirmPassword = "string",
+            PhoneNumber = 0
         };
+
         _mockValidator.Setup(v => v.Validate(It.IsAny<UsercreationDTO>()))
-            .Returns(new FluentValidation.Results.ValidationResult());
+                      .Returns(new FluentValidation.Results.ValidationResult());
 
         var result = await _controller.Register(userdto);
         var actionResult = Assert.IsType<BadRequestObjectResult>(result);
         Assert.Equal(400, actionResult.StatusCode);
-        Assert.Equal("Invalid input data", actionResult.Value);
+        Assert.Equal("Fields cannot be empty, Please provide the valid input data", actionResult.Value);
 
     }
 
     [Fact]
-    
-    public async Task Register_duplicatephonenumber_ReturnsBadRequest()
+
+    public async Task Register_duplicatePhoneNumber_ReturnsBadRequest()
     {
         var userdto = new UsercreationDTO()
         {
@@ -226,7 +238,7 @@ public class UserAccountControllerTests
             Password = "existingPassword",
             PhoneNumber = 1234567890,
             IsEmailVerified = true,
-            Verificationstatus = "true",
+            Verificationstatus = "false",
             IsPhonenumberVerified = true,
 
         };
@@ -239,31 +251,160 @@ public class UserAccountControllerTests
              .Returns(new FluentValidation.Results.ValidationResult());
 
         var result = await _controller.Register(userdto);
-        var actionResult =Assert.IsType<BadRequestObjectResult>(result);
+        var actionResult = Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal(400, actionResult.StatusCode);
+
+    }
+ 
+
+    [Fact]
+
+    public async Task SendEmailOtp_InvalidEmail_ReturnsBadRequest()
+    {
+
+        var emaildto = new EmailVerificationdto
+        {
+            Email = "JohnDoe@^&^&*)_+++==="
+        };
+
+        _mockemailValidator.Setup(v => v.Validate(It.IsAny<EmailVerificationdto>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+
+        var result = await _controller.SendEmailOtp(emaildto);
+        var actionResult = Assert.IsType<BadRequestObjectResult>(result);
         Assert.Equal(400, actionResult.StatusCode);
 
     }
 
     [Fact]
-    public async Task Register_InternalServerError_ReturnsBadRequest()
+
+    public async Task SendEmailOtp_ValidEmail_ReturnSuccess()
     {
-        var userdto = new UsercreationDTO()
+        var email = new EmailVerificationdto
         {
-            Name = "JohnDoe",
-            Email = "JohnDoe@example.com",
-            PhoneNumber = 1234567890,
-            Password = "JohnDoe@123",
-            ConfirmPassword = "JohnDoe@123"
+            Email = "JohnDoe@example.com"
         };
 
-        _mockValidator.Setup(v => v.Validate(It.IsAny<UsercreationDTO>()))
-        .Returns(new FluentValidation.Results.ValidationResult());
 
-        var result = await _controller.Register(userdto);
-        var actionResult = Assert.IsType<ObjectResult>(result);
-        Assert.Equal(500,actionResult.StatusCode);
+        _mockOtpService.Setup(s => s.GenerateOTP())
+            .ReturnsAsync("12345");
+
+        _mockOtpService.Setup(s => s.SaveOtpAsync(It.IsAny<int>(), "12345",OTPType.EmailVerfication))
+            .Returns(Task.CompletedTask);
+
+        _mockEmailService.Setup(s => s.SendOtpEmailAsync(It.IsAny<string>(), "12345"))
+       .Returns(Task.CompletedTask);
+
+        var existingUser = new User
+        {
+            Name = "Existing User",
+            Email = "JohnDoe@example.com",
+            Password = "existingPassword",
+            PhoneNumber = 1234567890,
+            IsEmailVerified = false,
+            Verificationstatus = "false",
+            IsPhonenumberVerified = true,
+
+        };
+
+        _context.Users.Add(existingUser);
+        await _context.SaveChangesAsync();
+
+        _mockemailValidator.Setup(v => v.Validate(It.IsAny<EmailVerificationdto>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+
+        var result = await _controller.SendEmailOtp(email);
+        var actionResult = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(200, actionResult.StatusCode);
+        Assert.Equal("OTP sent to email. Please verify your email.", actionResult.Value);
+    }
+
+    [Fact]
+    public async Task SendEmailOtp_UserNotExists_ReturnsBadRequest()
+    {
+        var emaildto = new EmailVerificationdto
+        {
+            Email = "JohnDoe12@example.com"
+        };
+
+        _context.Users.RemoveRange(_context.Users);
+        await _context.SaveChangesAsync();
+
+        _mockemailValidator.Setup(v => v.Validate(It.IsAny<EmailVerificationdto>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+        var result = await _controller.SendEmailOtp(emaildto);
+        var actionResult = Assert.IsType<BadRequestObjectResult>(result);
+        Assert.Equal(400, actionResult.StatusCode);
+        Assert.Equal("User does not exists", actionResult.Value);
+    }
+
+    [Fact]
+    public async Task SendEmailOtp_InternalServerError_ReturnsBadRequest()
+    {
+        var email = new EmailVerificationdto
+        {
+            Email = "JohnDoe@example.com"
+        };
+        _mockemailValidator.Setup(v => v.Validate(It.IsAny<EmailVerificationdto>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+
+
+        _mockEmailService.Setup(s => s.SendOtpEmailAsync(It.IsAny<string>(), It.IsAny<string>()))
+     .ThrowsAsync(new Exception("Internal server error"));
+
+
+        var result = await _controller.SendEmailOtp(email);
+        var actionResult = Assert.IsType<ObjectResult>(result);        Assert.Equal(500, actionResult.StatusCode);
+        Assert.Equal("Internal server error", actionResult.Value);
 
     }
+
+    [Fact]
+
+    public async Task ResendEmailOtp_ReturnsValidData()
+    {
+        var resend = new ResendOtpDTO
+        {
+            UserId = 1,
+            email = "JohnDoe@example.com"
+        };
+
+        _mockResendOtpValidator.Setup(v => v.Validate(It.IsAny<ResendOtpDTO>()))
+            .Returns(new FluentValidation.Results.ValidationResult());
+
+        _mockOtpService.Setup(v => v.GenerateOTP())
+            .ReturnsAsync("85272");
+
+        _mockOtpService.Setup(s => s.SaveOtpAsync(It.IsAny<int>(), "85272", OTPType.EmailVerfication))
+            .Returns(Task.CompletedTask);
+
+        _mockEmailService.Setup(s => s.SendOtpEmailAsync(It.IsAny<string>(), "85272"))
+
+            .Returns(Task.CompletedTask);
+
+        var user = new User
+        {
+            Id = 1,
+            Name = "JohnDoe",
+            Verificationstatus = "false",
+            Email = "JohnDoe@example.com",
+            IsEmailVerified = false,
+            PhoneNumber = 1234567890,
+            Password = "hashedPassword",
+
+        };
+
+        _context.Users.Add(user);   
+        await _context.SaveChangesAsync();  
+      
+        var result = await _controller.ResendEmailOtp(resend);  
+        var actionResult = Assert.IsType<OkObjectResult>(result);
+        Assert.Equal(200, actionResult.StatusCode);
+        Assert.Equal("New OTP sent to your email.", actionResult.Value);
+
+    }
+
+   
 }
 
 
