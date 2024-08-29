@@ -32,11 +32,12 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
-builder.Services.AddScoped<OtpService>();
-builder.Services.AddScoped<Passwordservice>();
+builder.Services.AddScoped<IOtpService, OtpService>();
+builder.Services.AddScoped<IPasswordService, Passwordservice>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<ISMSService, Smsservice>();
 builder.Services.AddScoped<IOtpService, OtpService>();
+builder.Services.AddScoped<Ijwtservice, JwtService>();  
 
 
 builder.Services.AddAutoMapper(typeof(Program));
